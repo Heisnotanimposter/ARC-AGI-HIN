@@ -1,0 +1,8 @@
+# HINAGI 2026 — Tier R1 Portable CPU Audit-Reproducibility Requirements (GA-06)
+#
+# Tier R1 deterministic telemetry reconstruction, independent arithmetic verification,
+# boundary replay, statistical addenda verification, and SHA-256 manifest checking
+# require ONLY Python >= 3.12 standard library modules (zero PyPI network fetch
+# and zero GPU / CUDA / SGLang / proprietary wheel dependencies).
+#
+# Tested offline on: Python 3.12.x (`python3 -m venv .venv && pip install -r requirements.txt`)

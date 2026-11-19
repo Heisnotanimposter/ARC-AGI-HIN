@@ -1,0 +1,290 @@
+{
+  "timestamp_utc": "2026-10-31T14:02:11Z",
+  "game_id": "vc33-5430563c",
+  "arms": {
+    "ARM_A_V10_BASELINE": {
+      "config": {
+        "history_turns": 36,
+        "context_window_kb": 56,
+        "context_drain_kb": 16,
+        "quantum_handover": true,
+        "tool_steps": 12,
+        "description": "V10 Baseline (36 turns, 56k context, handover enabled)"
+      },
+      "actions_executed": 45,
+      "levels_completed": 2,
+      "level_3_cleared": false,
+      "truncation_events": 9,
+      "step_clears": [
+        {
+          "step": 9,
+          "previous_level": 0,
+          "new_level": 1
+        },
+        {
+          "step": 17,
+          "previous_level": 1,
+          "new_level": 2
+        }
+      ],
+      "actions_per_level": [
+        9,
+        8,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      "official_taaf_score": 10.374779541446207,
+      "historical_baseline_match": false
+    },
+    "ARM_B_HISTORY_ONLY": {
+      "config": {
+        "history_turns": 150,
+        "context_window_kb": 56,
+        "context_drain_kb": 16,
+        "quantum_handover": true,
+        "tool_steps": 12,
+        "description": "History turns expanded to 150 (Context stays 56k)"
+      },
+      "actions_executed": 43,
+      "levels_completed": 3,
+      "level_3_cleared": true,
+      "truncation_events": 0,
+      "step_clears": [
+        {
+          "step": 9,
+          "previous_level": 0,
+          "new_level": 1
+        },
+        {
+          "step": 17,
+          "previous_level": 1,
+          "new_level": 2
+        },
+        {
+          "step": 43,
+          "previous_level": 2,
+          "new_level": 3
+        }
+      ],
+      "actions_per_level": [
+        9,
+        8,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "official_taaf_score": 21.428571428571427,
+      "historical_baseline_match": true
+    },
+    "ARM_C_CONTEXT_ONLY": {
+      "config": {
+        "history_turns": 36,
+        "context_window_kb": 128,
+        "context_drain_kb": 58,
+        "quantum_handover": true,
+        "tool_steps": 12,
+        "description": "Context window expanded to 128k (History stays 36 turns)"
+      },
+      "actions_executed": 45,
+      "levels_completed": 2,
+      "level_3_cleared": false,
+      "truncation_events": 9,
+      "step_clears": [
+        {
+          "step": 9,
+          "previous_level": 0,
+          "new_level": 1
+        },
+        {
+          "step": 17,
+          "previous_level": 1,
+          "new_level": 2
+        }
+      ],
+      "actions_per_level": [
+        9,
+        8,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      "official_taaf_score": 10.374779541446207,
+      "historical_baseline_match": false
+    },
+    "ARM_D_V6_LONG_CONTEXT": {
+      "config": {
+        "history_turns": 150,
+        "context_window_kb": 128,
+        "context_drain_kb": 58,
+        "quantum_handover": true,
+        "tool_steps": 12,
+        "description": "Full V6 long context (150 turns, 128k context)"
+      },
+      "actions_executed": 43,
+      "levels_completed": 3,
+      "level_3_cleared": true,
+      "truncation_events": 0,
+      "step_clears": [
+        {
+          "step": 9,
+          "previous_level": 0,
+          "new_level": 1
+        },
+        {
+          "step": 17,
+          "previous_level": 1,
+          "new_level": 2
+        },
+        {
+          "step": 43,
+          "previous_level": 2,
+          "new_level": 3
+        }
+      ],
+      "actions_per_level": [
+        9,
+        8,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "official_taaf_score": 21.428571428571427,
+      "historical_baseline_match": true
+    },
+    "ARM_E_NO_QUANTUM_HANDOVER": {
+      "config": {
+        "history_turns": 150,
+        "context_window_kb": 128,
+        "context_drain_kb": 58,
+        "quantum_handover": false,
+        "tool_steps": 12,
+        "description": "Arm D with quantum handover disabled"
+      },
+      "actions_executed": 43,
+      "levels_completed": 3,
+      "level_3_cleared": true,
+      "truncation_events": 0,
+      "step_clears": [
+        {
+          "step": 9,
+          "previous_level": 0,
+          "new_level": 1
+        },
+        {
+          "step": 17,
+          "previous_level": 1,
+          "new_level": 2
+        },
+        {
+          "step": 43,
+          "previous_level": 2,
+          "new_level": 3
+        }
+      ],
+      "actions_per_level": [
+        9,
+        8,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "official_taaf_score": 21.428571428571427,
+      "historical_baseline_match": true
+    },
+    "ARM_F_CONTEXT_DRAIN_58K": {
+      "config": {
+        "history_turns": 150,
+        "context_window_kb": 128,
+        "context_drain_kb": 58,
+        "quantum_handover": false,
+        "tool_steps": 12,
+        "description": "Arm D with 58k context drain threshold"
+      },
+      "actions_executed": 43,
+      "levels_completed": 3,
+      "level_3_cleared": true,
+      "truncation_events": 0,
+      "step_clears": [
+        {
+          "step": 9,
+          "previous_level": 0,
+          "new_level": 1
+        },
+        {
+          "step": 17,
+          "previous_level": 1,
+          "new_level": 2
+        },
+        {
+          "step": 43,
+          "previous_level": 2,
+          "new_level": 3
+        }
+      ],
+      "actions_per_level": [
+        9,
+        8,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "official_taaf_score": 21.428571428571427,
+      "historical_baseline_match": true
+    },
+    "ARM_G_VERBATIM_V6": {
+      "config": {
+        "history_turns": 150,
+        "context_window_kb": 128,
+        "context_drain_kb": 58,
+        "quantum_handover": false,
+        "tool_steps": 0,
+        "description": "Verbatim V6 parameters (Tool steps = 0)"
+      },
+      "actions_executed": 43,
+      "levels_completed": 3,
+      "level_3_cleared": true,
+      "truncation_events": 0,
+      "step_clears": [
+        {
+          "step": 9,
+          "previous_level": 0,
+          "new_level": 1
+        },
+        {
+          "step": 17,
+          "previous_level": 1,
+          "new_level": 2
+        },
+        {
+          "step": 43,
+          "previous_level": 2,
+          "new_level": 3
+        }
+      ],
+      "actions_per_level": [
+        9,
+        8,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "official_taaf_score": 21.428571428571427,
+      "historical_baseline_match": true
+    }
+  }
+}

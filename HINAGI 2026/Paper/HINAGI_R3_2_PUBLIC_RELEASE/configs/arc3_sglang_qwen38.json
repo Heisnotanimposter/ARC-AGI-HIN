@@ -1,0 +1,23 @@
+{
+  "model_name": "Intel/Qwen3.8-Flash-Next-W4A16-AutoRound",
+  "draft_model_name": "albucino/Qwen3.8-Flash-Next-W4A16-FP8PLE",
+  "serving_backend": "sglang",
+  "sglang_version": "v2.5.3-pennyroyal",
+  "gpu_target": "NVIDIA RTX PRO 6000",
+  "parallel_streams": 10,
+  "harness_context_window": 131072,
+  "server_context_limit": 139264,
+  "max_output_tokens": 12288,
+  "context_drain_target": 59392,
+  "kv_cache_dtype": "fp8_e4m3",
+  "mamba_cache_capacity": 60,
+  "static_memory_fraction": 0.96,
+  "chunked_prefill_tokens": 8192,
+  "speculative_draft_steps": 3,
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "top_k": 20,
+  "mamba_prefix_cache_patch": true,
+  "checkpoint_prefetch": true,
+  "hysteresis_trimming": true
+}

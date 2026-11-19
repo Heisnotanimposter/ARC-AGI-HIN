@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-10-31T11:01:23.632740+00:00",
+  "submission_ref": 57827259,
+  "classification": "OUT_OF_POLICY_EXCEPTION_SUBMISSION",
+  "competition_id": "arc-prize-2026-arc-agi-3",
+  "kernel_version": 10,
+  "kernel_slug": "test013/arc-agi-3-sota",
+  "kernel_sha256": "5f940b9615dee4ab337c564e465fb1701635cdd842b66bbeacc83372e71c5b3b",
+  "submission_record": {
+    "ref": "57827259",
+    "filename": "submission.parquet",
+    "date": "2026-10-31 05:06:36.620000",
+    "raw_status": "SubmissionStatus.PENDING",
+    "exact_status": "PENDING",
+    "public_score": null,
+    "private_score": null,
+    "raw_line": "57827259  submission.parquet  2026-10-31 05:06:36.620000  ARC-AGI-3 Architecture 3.3 (V10 Baseline Recovery & Multi-Worker Scheduling)                                               SubmissionStatus.PENDING                              "
+  },
+  "policy_audit": {
+    "policy_rule": "Pre-submission evaluation >= 45.0 required before any competition submission",
+    "violation_confirmed": true,
+    "violation_reason": "Dispatched to Kaggle competition queue via CLI at 05:06:36 UTC without satisfying the 45.0 pre-submission threshold. Target score argument '45.0' was an aspirational CLI tag, not empirical evidence of pre-submission qualification.",
+    "daily_quota_impact": "Consumed daily submission quota for 2026-10-31 UTC (0 submissions remaining for the date).",
+    "remedy_classification": "Must be designated as an OUT_OF_POLICY_EXCEPTION_SUBMISSION in all ledgers and audits. Cannot be cited as an authorized milestone."
+  },
+  "baseline_comparison": {
+    "baseline_ref": 57758308,
+    "baseline_public_score": 33.38,
+    "baseline_date": "2026-10-29 04:16:34.163000",
+    "leaderboard_impact": "Baseline 33.38 is automatically preserved unless 57827259 scores higher."
+  },
+  "raw_cli_record": "57827259  submission.parquet  2026-10-31 05:06:36.620000  ARC-AGI-3 Architecture 3.3 (V10 Baseline Recovery & Multi-Worker Scheduling)                                               SubmissionStatus.PENDING                              "
+}

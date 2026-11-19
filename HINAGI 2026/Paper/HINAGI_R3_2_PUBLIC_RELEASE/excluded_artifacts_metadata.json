@@ -1,0 +1,869 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Metadata-only cryptographic pointers for Tier R1 excluded binaries/sibling runs and sanitized logs",
+  "sanitized_files": {
+    "submissions/arc3_v10_verified/arc-agi-3-sota.log": {
+      "raw_size_bytes": 49304,
+      "raw_sha256": "f5f0236aec12d11d1ced86e7fa615c26ffa8d179d06a7c9eac2b9e5b0e1ab30e",
+      "sanitized_size_bytes": 49304,
+      "sanitized_sha256": "6a567b96dd5ed62e044aea94cee931e9dd8661f4ad0b74bdf091f8bbc641ac1f",
+      "redaction": "Replaced upstream local home path prefix on L176 HarnessSolver banner with <USER_HOME_REDACTED>"
+    },
+    "submissions/arc3_v6_smoke_verified/arc-agi-3-sota.log": {
+      "raw_size_bytes": 50205,
+      "raw_sha256": "09d3213e1292291c9d4c96a71a16e00e70dec1f06d87deeb48d7fc084ef10cdc",
+      "sanitized_size_bytes": 50205,
+      "sanitized_sha256": "c68d8bc37f3b03b3a48cbaa33f984115d7a4022aaf6a3a287481815b68b37d5c",
+      "redaction": "Replaced upstream local home path prefix on L178 HarnessSolver banner with <USER_HOME_REDACTED>"
+    }
+  },
+  "v10_raw_totals": {
+    "total_files": 212,
+    "total_bytes": 101527880,
+    "included_r1_files": 81,
+    "excluded_v10_files": 131,
+    "excluded_v10_bytes": 22923071
+  },
+  "excluded_v10_artifacts": [
+    {
+      "relative_path": "submissions/arc3_v10_verified/.per_game_cards.pkl",
+      "size_bytes": 1447953,
+      "sha256": "7e3cd8dcb1d401b2e3a7fde4463b569050bcb2303353fc537b8473a0f284bc10",
+      "exclusion_reason": "pickle_binary_pkl"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/ar25-0c556536_p0_viewer_data.json",
+      "size_bytes": 851,
+      "sha256": "308e568687294634bb3433146549051e4a3c424ad27a2239195b2cc898c947da",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/bp35-0a0ad940_p0_viewer_data.json",
+      "size_bytes": 839,
+      "sha256": "551d9eab0f1bded0c842bd7d030aedff4593a6f02540a034ca2dcc5de2b77132",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/cd82-fb555c5d_p0_viewer_data.json",
+      "size_bytes": 821,
+      "sha256": "abd18123f721c1a828f9fc1f40339e61c4ac77514a9f9a1b4db4f9d8c992f9ee",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/cn04-2fe56bfb_p0_viewer_data.json",
+      "size_bytes": 836,
+      "sha256": "6dae668d99f9d5c43b0539a9c4ef6b9d627c0248b9d87d0376c56097565c657c",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/dc22-fdcac232_p0_viewer_data.json",
+      "size_bytes": 818,
+      "sha256": "12beacc6242ab351125ca8ce6babab19a400e0b255b3bb730cc42e8737ebc42e",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/ft09-0d8bbf25_p0_viewer_data.json",
+      "size_bytes": 851,
+      "sha256": "899184e577de56938326318b920daa03d0b779cea9b5f00b6efe7d168397161e",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/g50t-5849a774_p0_viewer_data.json",
+      "size_bytes": 828,
+      "sha256": "c73ca7c99f8bdfcde474b3b401fe48b67ba9675550f7f3ef223fa6644db06c8d",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/ka59-38d34dbb_p0_viewer_data.json",
+      "size_bytes": 824,
+      "sha256": "3d5be30b4fb563ec6a806ab4df1db860684e40827d8193833f588ca8d2aee09b",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/lf52-271a04aa_p0_viewer_data.json",
+      "size_bytes": 863,
+      "sha256": "7b1d11269bfa12f5ae02c2322d83239e56a97f1bb4b2ae7c63633df9dc7a18f2",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/lp85-305b61c3_p0_viewer_data.json",
+      "size_bytes": 865,
+      "sha256": "50da4002f73afdfbf7f2a5872cef227313c7404337a1b0d604bad19e4eb38314",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/ls20-9607627b_p0_viewer_data.json",
+      "size_bytes": 824,
+      "sha256": "67c38465b335a84496267bbdc0f5af7e8f52e69ce11732545e897724a3b37496",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/m0r0-492f87ba_p0_viewer_data.json",
+      "size_bytes": 819,
+      "sha256": "01e8b7a12d49b6fb2b4433fff1f8234862d9c49f01e701103b6afba9a3aedd8a",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/r11l-495a7899_p0_viewer_data.json",
+      "size_bytes": 850,
+      "sha256": "3abe9287977bf417e82edfcc3d80ca083ca3536dbc8b4a96bcf8a1147c602ff0",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/re86-8af5384d_p0_viewer_data.json",
+      "size_bytes": 834,
+      "sha256": "1998afda12cd3b63b7a6be6776ea4b7ac05d1b4b9268ed30e834e19eae3ca586",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/s5i5-18d95033_p0_viewer_data.json",
+      "size_bytes": 851,
+      "sha256": "a7605d3382a017cf6182a0cbce7189c782d8bc947e53fe9b7c6dbaf8a7d54a38",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/sb26-7fbdac44_p0_viewer_data.json",
+      "size_bytes": 868,
+      "sha256": "238735bc29f3e389478ec768cb4bc9041764e18686c69a6f878cbff359f46700",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/sc25-635fd71a_p0_viewer_data.json",
+      "size_bytes": 837,
+      "sha256": "d40b1f88b7582fee7443ad1e044e60ca8fdaca3be59c37e70bb256f886d08584",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/sk48-d8078629_p0_viewer_data.json",
+      "size_bytes": 828,
+      "sha256": "7b1bc71b3bf89d2748e1b2c4420fbf030d09e9cc3d94ff97561a5dc0516d70c4",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/sp80-589a99af_p0_viewer_data.json",
+      "size_bytes": 834,
+      "sha256": "2e2271607045705353eedd4ce8d5c6e1fb5121077ab149e2923accde90e55908",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/su15-1944f8ab_p0_viewer_data.json",
+      "size_bytes": 855,
+      "sha256": "f5fb49464374662dbe306c0fb69e18eb0bac60cd8724fed8a8139f9ab3d98a65",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/tn36-ef4dde99_p0_viewer_data.json",
+      "size_bytes": 841,
+      "sha256": "a05a118cf659a932d7f3663c3f2b6b56921850ecc0a2283f5fda83f909035059",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/tr87-cd924810_p0_viewer_data.json",
+      "size_bytes": 849,
+      "sha256": "9d09763e1896ebba1faf4801564581c6e9bf398e10989171ad3209258f35d0ad",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/tu93-0768757b_p0_viewer_data.json",
+      "size_bytes": 837,
+      "sha256": "01952beada964a4b5bf07ca62b5f69d88937846dea1961ab3b6664e72849187b",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/vc33-5430563c_p0_viewer_data.json",
+      "size_bytes": 861,
+      "sha256": "d67b48bf6651a1dd4c008b6ed0ae65de5013690dac4908e7dbef29e352465940",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/artifacts/wa30-ee6fef47_p0_viewer_data.json",
+      "size_bytes": 839,
+      "sha256": "b8d3ba1992298568ea79f1ebf364ad26aebc463be0f6a6db3985848bf7a1c439",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/diagnostics.html",
+      "size_bytes": 2028615,
+      "sha256": "fae4da5426538b97658b80628562eb31bfc48e80780fc04df692bec5de7a2e5b",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/games.pkl",
+      "size_bytes": 2187,
+      "sha256": "a67403db7d07bca1bf3c23684bc9fc7aaf3a916413eed3386072b64634785d9c",
+      "exclusion_reason": "pickle_binary_pkl"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/intermediate_states.pkl",
+      "size_bytes": 5094590,
+      "sha256": "01e93acd1de18e9e0923731328a4f5876a188c67fbe22e8d5b696055662e982d",
+      "exclusion_reason": "pickle_binary_pkl"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gar25-0c556536_p0.html",
+      "size_bytes": 6761,
+      "sha256": "8214e5a3cd0195fac8974f5bdbca94e4471be5713a3257a8b9adcf0703843811",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gar25-0c556536_p0.mp4",
+      "size_bytes": 9514,
+      "sha256": "40d25ee38d783c3f2ba8d9784326d013fa1d65debe20c8a03437cb1fc49f083e",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gbp35-0a0ad940_p0.html",
+      "size_bytes": 6761,
+      "sha256": "3163b90e3be4b4864231f6cdf1d843a0db1f4c2866aa2fc10bb7d6e077dc66ff",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gbp35-0a0ad940_p0.mp4",
+      "size_bytes": 7065,
+      "sha256": "187df0929cf441b1db921b6200fd594e49f7a3f348d167d3d15546e95996495f",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gcd82-fb555c5d_p0.html",
+      "size_bytes": 6761,
+      "sha256": "95c29059933ec12b933644d6d3bbceef312e6d61ce9e8d275d194199bbbe1196",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gcd82-fb555c5d_p0.mp4",
+      "size_bytes": 2748,
+      "sha256": "46a1f6af8181bb9a22343ec9143ac11b42a0f33e43dc2c448db3cad539dbe6ea",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gcn04-2fe56bfb_p0.html",
+      "size_bytes": 6761,
+      "sha256": "af369f9ca4943217c820128ab2dd0bcccfe3897ec4bcec26ecd4c1c65a938c7e",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gcn04-2fe56bfb_p0.mp4",
+      "size_bytes": 6646,
+      "sha256": "12922576fc4c23b0877ddef5ac8f5fd9692a55b352e4511e6e42f5e9422165e8",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gdc22-fdcac232_p0.html",
+      "size_bytes": 6761,
+      "sha256": "47c6f5224324a5a71a32e8005ac6d3a1d84d66c5fec3c1748fcfb681b305922d",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gdc22-fdcac232_p0.mp4",
+      "size_bytes": 3350,
+      "sha256": "70612c9e632ffc278ac4e77b87020df7e5db68aaed9f85c596a063d63583862b",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gft09-0d8bbf25_p0.html",
+      "size_bytes": 6761,
+      "sha256": "22925eedf94efb6abc1b2c3b842e0b2b0f501d965135d8fe7da93faf25172970",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gft09-0d8bbf25_p0.mp4",
+      "size_bytes": 8160,
+      "sha256": "07f65e0602648132c6f85dfacffeaa207c19156ded5397bb75c4cab7a0d5b89b",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gg50t-5849a774_p0.html",
+      "size_bytes": 6761,
+      "sha256": "910fba1049568d59016a35129538978675d26a7fcbd2a5a69dc992eea1e2e1dc",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gg50t-5849a774_p0.mp4",
+      "size_bytes": 3842,
+      "sha256": "38323c22b72b86b519358e2826c979dcb04d79e538da372211112f40af9c958e",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gka59-38d34dbb_p0.html",
+      "size_bytes": 6761,
+      "sha256": "ba713710d0d631e7514326b9c034e3557a93e3390c9193e593beecbc7150ab8a",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gka59-38d34dbb_p0.mp4",
+      "size_bytes": 2591,
+      "sha256": "edc9b304fcdad4f9aa601f21394f0ab19b72c5a30aaca36c4e270be923c4f6c0",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/glf52-271a04aa_p0.html",
+      "size_bytes": 6761,
+      "sha256": "dd8af28bd6940fc8e7ad6792c62fd04a96a3ae739ee3178d759167a99ec09d2d",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/glf52-271a04aa_p0.mp4",
+      "size_bytes": 2953,
+      "sha256": "4a5b356235722083f6e772ae1fa1ab66452be24ee370a128d1f4046449fa5837",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/glp85-305b61c3_p0.html",
+      "size_bytes": 6761,
+      "sha256": "0856b0c20eaa25e1ea06bcff394a11711e9b6a02cf06f045eb63302639bdea6d",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/glp85-305b61c3_p0.mp4",
+      "size_bytes": 7147,
+      "sha256": "f3ca9f1724f491ac2fa406a3b234a491f81caa079e483b1978d7df39e8021216",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gls20-9607627b_p0.html",
+      "size_bytes": 6761,
+      "sha256": "0d5694ed404624a6ebcf4d1d0b734039249d305e40a033471ad1b8103b081778",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gls20-9607627b_p0.mp4",
+      "size_bytes": 3199,
+      "sha256": "84ce619698e7e3d4e9a064c56a1a53ee014424d1e0003c6eca19726cd30482ff",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gm0r0-492f87ba_p0.html",
+      "size_bytes": 6761,
+      "sha256": "09aaa2c547774112b31ee07b1d0d3511386c936996c3026f2ec802cf8d2554f5",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gm0r0-492f87ba_p0.mp4",
+      "size_bytes": 3309,
+      "sha256": "0080852c82e3922966265dd95b2e549e0412ee704acfb51da641f3e316ff3394",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gr11l-495a7899_p0.html",
+      "size_bytes": 6761,
+      "sha256": "fb226b7c9edfd967d17989d708f75d2bbafeaccb46cec291b40e3d4317f6a418",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gr11l-495a7899_p0.mp4",
+      "size_bytes": 5863,
+      "sha256": "1b15a53ae5c8b43dcbbf449076db66ac926fc99f5c232fa5a3d229c3e6d7887a",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gre86-8af5384d_p0.html",
+      "size_bytes": 6761,
+      "sha256": "6994a829be6ea7b221e30fa194fe958950eae534ad3a5e0c85d5f5b0955e8425",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gre86-8af5384d_p0.mp4",
+      "size_bytes": 5296,
+      "sha256": "c0f172e554b727040dbf13689ff49d0c1c8525068ad3ea170af9d66d0e68b5c4",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gs5i5-18d95033_p0.html",
+      "size_bytes": 6761,
+      "sha256": "e4ae24430d7464eb1f8aa8c14948d50e3c9a1ad01afeee91706523d306cbc0b2",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gs5i5-18d95033_p0.mp4",
+      "size_bytes": 3195,
+      "sha256": "e8169fa61d6b93ce1a6f2117ba81ac884334ed6619d3806fe4176a92b4d1b710",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsb26-7fbdac44_p0.html",
+      "size_bytes": 6761,
+      "sha256": "deae6c6b545a050d9129dad931356b1ac355bba256478011dfa6b6e9ccb15dcc",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsb26-7fbdac44_p0.mp4",
+      "size_bytes": 8327,
+      "sha256": "7d9e846cb81710b3567b3184d05aa2168249a46b9eb1d922113e24dee7c0aa24",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsc25-635fd71a_p0.html",
+      "size_bytes": 6761,
+      "sha256": "9215c5b27a40a239863dffeca03c77f5c4fdfde8e4095cea19d3c9294c1133af",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsc25-635fd71a_p0.mp4",
+      "size_bytes": 3499,
+      "sha256": "506794dbd63df7a47c2f064f1cee0ca723033ddfe004c151ee3490eb0371ca88",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsk48-d8078629_p0.html",
+      "size_bytes": 6761,
+      "sha256": "9f75340d6e784bb76c039f388860da761840af8a35ae1ed0bd9ee70a4dd2be4f",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsk48-d8078629_p0.mp4",
+      "size_bytes": 2433,
+      "sha256": "61b3e00c597117151401c0558cf156edd26b4054c83ca58ec937858a687f4d9a",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsp80-589a99af_p0.html",
+      "size_bytes": 6761,
+      "sha256": "9ed3cec81b803f8418aa1e35531854358db791a5412469edbaef643eddcd7194",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsp80-589a99af_p0.mp4",
+      "size_bytes": 3049,
+      "sha256": "68a109c4e2ad004e61e0c294d35280ca7d7da8be6eb0b52b2e3a1f8a98720c72",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsu15-1944f8ab_p0.html",
+      "size_bytes": 6761,
+      "sha256": "99140f862253fe9d3d6385243a2f4210ae503fd32b67dca2a972b5026f858a08",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gsu15-1944f8ab_p0.mp4",
+      "size_bytes": 2663,
+      "sha256": "71e994d30cc5ab4a1b9638c4c94cd64ac84e79b1c5b189afbc31b0144ad5e4fe",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gtn36-ef4dde99_p0.html",
+      "size_bytes": 6761,
+      "sha256": "2b5b65ce20b690cdf550d32b0d2626f9288d3080bf6d2115177ad06eacf33dd8",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gtn36-ef4dde99_p0.mp4",
+      "size_bytes": 2878,
+      "sha256": "07835f231a003844bf302ea98011f3af6974b753bab48f8ec921d69142d589f8",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gtr87-cd924810_p0.html",
+      "size_bytes": 6761,
+      "sha256": "2db3621e58554181fcbb3c173735276e77cb6fc4275c0ac94b59bb2da0905c59",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gtr87-cd924810_p0.mp4",
+      "size_bytes": 9848,
+      "sha256": "9f3dd90f3558a385adfc5b3874ee0b07eb0843fd4281ad2d35269c7f0e1e2b21",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gtu93-0768757b_p0.html",
+      "size_bytes": 6761,
+      "sha256": "1ae81c910d9c74e134149015fd606d3e45fc89fb58450aa814c882312e8d30f6",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gtu93-0768757b_p0.mp4",
+      "size_bytes": 2403,
+      "sha256": "deabe0555b49c3dde98be84d9c2615086104739d28c21fe0ae53d00878bd7960",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gvc33-5430563c_p0.html",
+      "size_bytes": 6761,
+      "sha256": "d5045eaaff7fb2e4b73553914e50d3e87d036b507c75701b2eaa5e277af6007f",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gvc33-5430563c_p0.mp4",
+      "size_bytes": 4235,
+      "sha256": "61a2e31a7df33ba5211e82eb337bdd5747289566e0ec9735d80ab58316fb310b",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gwa30-ee6fef47_p0.html",
+      "size_bytes": 6761,
+      "sha256": "2bf2a6ff02641d4f759110909ce3f701a4e0c98507dd87c6f0d1debe7cd30eaa",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/movies/gwa30-ee6fef47_p0.mp4",
+      "size_bytes": 2698,
+      "sha256": "c859b88cf30f6f97410ab6cfa01ce4dd4b66bba8dd18b72fa8f3d92eb2bfcb66",
+      "exclusion_reason": "media_binary_mp4"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver.pkl",
+      "size_bytes": 1908,
+      "sha256": "07ffc7c2fe5ece3a04aae3ebb9c5629d885d266cc9fdeaed61dd023b424c9168",
+      "exclusion_reason": "pickle_binary_pkl"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/ar25-0c556536_p0.html",
+      "size_bytes": 520616,
+      "sha256": "9b5068a8895b6aca4c1ad7ada9ecf2ded3799a7fc58cdbc019b12d00b2d06887",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/bp35-0a0ad940_p0.html",
+      "size_bytes": 254590,
+      "sha256": "04eeee26adf88f9a8b81f5ab7be2d2e9ab3fe6d106a04fba70ca6fc178e14461",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/cd82-fb555c5d_p0.html",
+      "size_bytes": 339436,
+      "sha256": "66113c982b2192882b2d6bfe6ba00a0a19bb84f3ce7f4945921ed16b7297f190",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/cn04-2fe56bfb_p0.html",
+      "size_bytes": 334338,
+      "sha256": "d055433bcfa368004e55ce188b1de9f8272b5bd73c070a8808a8f85a37e5843d",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/dc22-fdcac232_p0.html",
+      "size_bytes": 224264,
+      "sha256": "af5517b1388bd9653831c9cd6b14ac0700826da74a5c76593d6b20c357b1f8e7",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/ft09-0d8bbf25_p0.html",
+      "size_bytes": 350906,
+      "sha256": "8f50d713ee84b97602d6acce6b5cea6a88997f6799d24e21e92052476d2c17d0",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/g50t-5849a774_p0.html",
+      "size_bytes": 355197,
+      "sha256": "76818b010b36fa20a6e389653fe855284dc10c01138c84509857802e30d986e3",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/ka59-38d34dbb_p0.html",
+      "size_bytes": 225012,
+      "sha256": "3e257153afb530949df1837b9aeccf78b94b42a2a5b3f531f6bac03a5bf03c7c",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/lf52-271a04aa_p0.html",
+      "size_bytes": 212272,
+      "sha256": "478d68e8cd08a3ec511a24483b3538caca7f0827a5ebe55d3035a3af74504491",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/lp85-305b61c3_p0.html",
+      "size_bytes": 269188,
+      "sha256": "70cea146d8fa19cd58818f44b40742d56262ae0bc1860910a5f0bd072a26edaa",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/ls20-9607627b_p0.html",
+      "size_bytes": 307288,
+      "sha256": "8ca4e4463a18c3f0c378c4c231f417c51242b0afc1e15d4957a0643ae5eaf065",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/m0r0-492f87ba_p0.html",
+      "size_bytes": 168552,
+      "sha256": "e8b17fd69f931d37a61571dbb965d276e2d5aa3a55691220b3104d8db5f19f13",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/r11l-495a7899_p0.html",
+      "size_bytes": 370842,
+      "sha256": "d1974e5093d685a14e27db9cd8f5fc0fbe397bc5e824f8da0b227be7c2dc4bdd",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/re86-8af5384d_p0.html",
+      "size_bytes": 215313,
+      "sha256": "5ed69b23c5bb12a18ccabc122e10b161a4087d34283e1e8b1bf3d6632c1715ca",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/s5i5-18d95033_p0.html",
+      "size_bytes": 217100,
+      "sha256": "562053f8bd9e8a7cbb4f439ceea2ff8b19e9e7d2ec3815fad54959927b672c01",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/sb26-7fbdac44_p0.html",
+      "size_bytes": 484162,
+      "sha256": "a2c18da470bd9d77e610f78ddb4e628ef40ef0e792c77689ed5a422ce9a3398c",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/sc25-635fd71a_p0.html",
+      "size_bytes": 246413,
+      "sha256": "325b865ee2315c96857b3bdcab7bc46934f67bd430c4214930c17846fb14f926",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/sk48-d8078629_p0.html",
+      "size_bytes": 186238,
+      "sha256": "8f75365c001f25fa7dd12c467330ddb7c74b8b1a45a660491f10941468c650e7",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/sp80-589a99af_p0.html",
+      "size_bytes": 372408,
+      "sha256": "5d4856b2c593e26be823c88d7ddae4b32921947b85d4b9bc78d9bcd9ecf7f1b1",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/su15-1944f8ab_p0.html",
+      "size_bytes": 262997,
+      "sha256": "12b52ae12d716433443a990b8f6cf2b273a4b5af4cf22eb054fd8e5a2c8c1be0",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/tn36-ef4dde99_p0.html",
+      "size_bytes": 185589,
+      "sha256": "a85239b4851739bdcf20a696e3060f1f9d7ffbd122410b5df4d6963a5b86cb41",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/tr87-cd924810_p0.html",
+      "size_bytes": 324737,
+      "sha256": "ffdc058ddc5ba43eab0f4e7879a715c43c59de80faa66efed7d564cbcc0d6569",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/tu93-0768757b_p0.html",
+      "size_bytes": 154824,
+      "sha256": "a1c90d96e50899dbe4e17f76810162d15366e1b7d32bd4e4a52835c7f3f3daa3",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/vc33-5430563c_p0.html",
+      "size_bytes": 414651,
+      "sha256": "f219273bfb5fb80e990d38de36344b87de231c245c842086c81c92b33dfe561f",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/solver_analysis/wa30-ee6fef47_p0.html",
+      "size_bytes": 179066,
+      "sha256": "30deebac604a70dbc3a273ba0813be625f59cd07b1305731f940c1c6ec37a08b",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/submission.parquet",
+      "size_bytes": 2648,
+      "sha256": "71bfd543030e339d87bd9ff744d466218398a1259650b2c255626d27049c88bb",
+      "exclusion_reason": "parquet_submission"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/ar25-0c556536_p0.txt",
+      "size_bytes": 502903,
+      "sha256": "e06bc1971aa4cc2c90c000adb01af26f55c41590f7bb2f683a97f2a3dc815113",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/bp35-0a0ad940_p0.txt",
+      "size_bytes": 241863,
+      "sha256": "d5592122bdaea6df95a5fdde31523fd06a09353ccf51c9dc66391f977577d7af",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/cd82-fb555c5d_p0.txt",
+      "size_bytes": 325109,
+      "sha256": "b7352edbf9a211e3ae94d8a0b54c9ff8d13d2d14c46ad86b859e60220b276e61",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/cn04-2fe56bfb_p0.txt",
+      "size_bytes": 321157,
+      "sha256": "c72450248f1581a49ac8a5d8496fa68714ab6b1272c7483318932f3b25ea4fab",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/dc22-fdcac232_p0.txt",
+      "size_bytes": 210578,
+      "sha256": "28dbfb63c6b9c95ff58f13bf5046d7de3320377429c9c23deeff556bdcf6134f",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/ft09-0d8bbf25_p0.txt",
+      "size_bytes": 335724,
+      "sha256": "cd819c9eb9a131a906e2d889e734b9cb6fc68d7821273c61844776e72be9fe99",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/g50t-5849a774_p0.txt",
+      "size_bytes": 341499,
+      "sha256": "8e0c3d1ca46a5bafdfb848998b7059d1f7b3385ff77f990962a5f1a2c4e703ba",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/ka59-38d34dbb_p0.txt",
+      "size_bytes": 213592,
+      "sha256": "45c4687ba59efa471a28126cbf89df1fac8823b47f4ad2620e4c324f7bf8716e",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/lf52-271a04aa_p0.txt",
+      "size_bytes": 202373,
+      "sha256": "5be21b8b754dc1fe60b8dd8b4f580a974310aeb5d209b4910084d95397463332",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/lp85-305b61c3_p0.txt",
+      "size_bytes": 259604,
+      "sha256": "e6762649c6d3ca5376caa527cb4c68befa6e2d2a8df3b25433f75f2ab515678f",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/ls20-9607627b_p0.txt",
+      "size_bytes": 295119,
+      "sha256": "1e96776700fc18bdb8d2535ae70fb80e79070e653515edc95142b02bd4c5f2f9",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/m0r0-492f87ba_p0.txt",
+      "size_bytes": 159446,
+      "sha256": "cd8245f9cbb60fecbb274bd4e83390a867a1fd267706b90192f39c3f427d21b3",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/r11l-495a7899_p0.txt",
+      "size_bytes": 353577,
+      "sha256": "6a3327cd9863d4bfa5ef38b2ea6c62a721484e0247a925477da55859e4ef865b",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/re86-8af5384d_p0.txt",
+      "size_bytes": 205350,
+      "sha256": "36a0ee5349ec1c67e24b11e358fa6d66f9db3be60eb0dc76d39bb6b33a1dbd31",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/s5i5-18d95033_p0.txt",
+      "size_bytes": 204480,
+      "sha256": "3e426ed5aff42b605caefe8046d6d83c4884d89a759cf6dd350aa85cf4997d07",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/sb26-7fbdac44_p0.txt",
+      "size_bytes": 463932,
+      "sha256": "daa3a7a5053e8c4610dedc2559af7a003ab08a9529a99501ad6ae2715dafc0b7",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/sc25-635fd71a_p0.txt",
+      "size_bytes": 235769,
+      "sha256": "d3bd6b0df11bd079c5ec5133991b0686cf41abcdd7f8274fa6c7590bdd986617",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/sk48-d8078629_p0.txt",
+      "size_bytes": 176754,
+      "sha256": "25d407d171fbea44fb1e2441d40e6bc3d25300eba7a8f31464a28bef77c300ce",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/sp80-589a99af_p0.txt",
+      "size_bytes": 357632,
+      "sha256": "6f5363aaea1e65e0ae1691dd713d9e3e62823421d56922f8f5f95bf3c1e57dff",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/su15-1944f8ab_p0.txt",
+      "size_bytes": 250371,
+      "sha256": "9b7fc075c3fdd5bba7685ad706a294921c114d7b93428f82fff300e2c0fafaf3",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/tn36-ef4dde99_p0.txt",
+      "size_bytes": 177981,
+      "sha256": "693f58e2ff32456a9017a4375518f703623ce2c1855275f59892a25744a17e86",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/tr87-cd924810_p0.txt",
+      "size_bytes": 310028,
+      "sha256": "c211e4cd21a54d9f730b6da65d15552a288ee9d6ec7bcb07f440477743e2fad6",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/tu93-0768757b_p0.txt",
+      "size_bytes": 146183,
+      "sha256": "02cd4072423cf55e545640af34bc6668b1f4e6d85d0e5312482d4d8aae5f4736",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/vc33-5430563c_p0.txt",
+      "size_bytes": 399304,
+      "sha256": "e8cb5c05ef89c65741af2732bd18e3018211c05c91e3abeaaf15a6f9d0edfbd3",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    },
+    {
+      "relative_path": "submissions/arc3_v10_verified/transcripts/wa30-ee6fef47_p0.txt",
+      "size_bytes": 171884,
+      "sha256": "710035e5ba23db429778e59e9707a984f57773b4ecf74df979bd4b96758fa6cb",
+      "exclusion_reason": "redundant_rendered_html_or_txt"
+    }
+  ],
+  "siblings_summary": {
+    "pulled_arc3_output": {
+      "files": 212,
+      "bytes": 101527880,
+      "same_rel_hash_as_v10": 212,
+      "diff_rel_hash_from_v10": 0,
+      "absent_from_v10": 0
+    },
+    "arc3_output": {
+      "files": 162,
+      "bytes": 81505668,
+      "same_rel_hash_as_v10": 3,
+      "diff_rel_hash_from_v10": 21,
+      "absent_from_v10": 138
+    },
+    "v6_smoke": {
+      "files": 4,
+      "bytes": 2164861,
+      "same_rel_hash_as_v10": 1,
+      "diff_rel_hash_from_v10": 3,
+      "absent_from_v10": 0
+    },
+    "v8_smoke": {
+      "files": 111,
+      "bytes": 49413561,
+      "same_rel_hash_as_v10": 18,
+      "diff_rel_hash_from_v10": 93,
+      "absent_from_v10": 0
+    },
+    "v9_smoke": {
+      "files": 20,
+      "bytes": 5464095,
+      "same_rel_hash_as_v10": 0,
+      "diff_rel_hash_from_v10": 20,
+      "absent_from_v10": 0
+    }
+  },
+  "excluded_or_portable_comparators": {
+    "Paper/branch_b_academic/analysis/v10_eviction_and_token_audit_report.md": {
+      "size_bytes": 18846,
+      "sha256": "976b3b6b70f9ed15124a11103494aca84fea946108bc5ec79fc9496248679b3d",
+      "note": "Excluded/portable-regenerated comparator recorded by SHA-256 only"
+    },
+    "Paper/branch_b_academic/paper/ARC3_Paper_v10_draft.tex": {
+      "size_bytes": 101459,
+      "sha256": "34fb5a8effe8af6148a929c4f7a98a7287dec5d538779d88a948a86d87381e96",
+      "note": "Excluded/portable-regenerated comparator recorded by SHA-256 only"
+    },
+    "Paper/branch_b_academic/paper/ARC3_Paper_v10_draft.pdf": {
+      "size_bytes": 149733,
+      "sha256": "3dc8cef27d1f7dad950c541f7f1714b57d28dafa2f6f2e9327992f6857af2825",
+      "note": "Excluded/portable-regenerated comparator recorded by SHA-256 only"
+    }
+  }
+}

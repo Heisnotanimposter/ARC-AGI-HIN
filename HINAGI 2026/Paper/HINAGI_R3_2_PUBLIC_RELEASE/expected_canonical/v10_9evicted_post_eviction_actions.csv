@@ -1,0 +1,26 @@
+game_id,action_num,analysis_step,evict_step,phase,level,action_display,board_changed,level_completed,score_after
+ar25-0c556536,32,12,12,at_eviction_step,2,RIGHT,True,False,1.0
+ar25-0c556536,33,12,12,at_eviction_step,2,RIGHT,False,False,1.0
+ar25-0c556536,34,13,12,strictly_later_step,2,SPACE,True,False,1.0
+ar25-0c556536,35,13,12,strictly_later_step,2,LEFT,True,False,1.0
+ar25-0c556536,36,14,12,strictly_later_step,2,SPACE,True,False,1.0
+ar25-0c556536,37,14,12,strictly_later_step,2,LEFT,True,False,1.0
+ar25-0c556536,38,15,12,strictly_later_step,2,DOWN,True,False,1.0
+ar25-0c556536,39,15,12,strictly_later_step,2,DOWN,True,False,1.0
+ar25-0c556536,40,15,12,strictly_later_step,2,DOWN,True,False,1.0
+ar25-0c556536,41,15,12,strictly_later_step,2,DOWN,True,False,1.0
+ar25-0c556536,42,15,12,strictly_later_step,3,DOWN,True,True,2.0
+cn04-2fe56bfb,25,8,8,at_eviction_step,2,RIGHT,True,False,1.0
+cn04-2fe56bfb,26,8,8,at_eviction_step,2,RIGHT,True,False,1.0
+cn04-2fe56bfb,27,8,8,at_eviction_step,2,RIGHT,True,False,1.0
+g50t-5849a774,13,6,6,at_eviction_step,1,DOWN,False,False,0.0
+sb26-7fbdac44,34,12,12,at_eviction_step,2,"MOUSE(row=22, col=22)",True,False,1.0
+vc33-5430563c,26,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,27,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,28,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,29,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,30,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,31,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,32,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,33,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",True,False,2.0
+vc33-5430563c,34,9,9,at_eviction_step,3,"MOUSE(row=56, col=46)",False,False,2.0

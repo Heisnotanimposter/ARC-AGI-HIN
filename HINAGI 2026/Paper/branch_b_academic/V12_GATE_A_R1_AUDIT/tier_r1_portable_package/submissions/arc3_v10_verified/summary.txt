@@ -1,0 +1,41 @@
+benchmark: duck-harness-kaggle
+solver:    duck-harness
+games:     25
+passes:    1
+runs:      25 (won: 0)
+started:   2026-10-30 05:07:34
+ended:     2026-10-30 05:30:19
+duration:  22m 45s
+mean score:    2.84
+median score:  0.00
+total actions: 386
+total tokens:  378304
+generated tokens/sec: 276.98 (job wallclock)
+total wallclock: 31308.5s
+
+per-game (mean across passes):
+  ar25-0c556536: score=8.33, levels=2.0/8, actions=42, tokens=23453
+  bp35-0a0ad940: score=0.00, levels=0.0/9, actions=8, tokens=12124
+  cd82-fb555c5d: score=0.00, levels=0.0/6, actions=10, tokens=18510
+  cn04-2fe56bfb: score=4.76, levels=1.0/6, actions=27, tokens=28304
+  dc22-fdcac232: score=0.00, levels=0.0/6, actions=14, tokens=12005
+  ft09-0d8bbf25: score=28.57, levels=3.0/6, actions=26, tokens=26347
+  g50t-5849a774: score=0.00, levels=0.0/7, actions=13, tokens=26532
+  ka59-38d34dbb: score=0.00, levels=0.0/7, actions=6, tokens=10906
+  lf52-271a04aa: score=0.00, levels=0.0/10, actions=6, tokens=11666
+  lp85-305b61c3: score=2.78, levels=1.0/8, actions=11, tokens=15748
+  ls20-9607627b: score=0.00, levels=0.0/7, actions=7, tokens=18418
+  m0r0-492f87ba: score=0.00, levels=0.0/6, actions=7, tokens=10131
+  r11l-495a7899: score=4.76, levels=1.0/6, actions=10, tokens=20168
+  re86-8af5384d: score=0.00, levels=0.0/8, actions=19, tokens=11568
+  s5i5-18d95033: score=0.00, levels=0.0/8, actions=18, tokens=11244
+  sb26-7fbdac44: score=2.78, levels=1.0/8, actions=34, tokens=22469
+  sc25-635fd71a: score=0.00, levels=0.0/6, actions=15, tokens=7301
+  sk48-d8078629: score=0.00, levels=0.0/8, actions=2, tokens=2925
+  sp80-589a99af: score=4.76, levels=1.0/6, actions=15, tokens=15234
+  su15-1944f8ab: score=0.00, levels=0.0/9, actions=8, tokens=10546
+  tn36-ef4dde99: score=0.00, levels=0.0/7, actions=6, tokens=6504
+  tr87-cd924810: score=4.76, levels=1.0/6, actions=30, tokens=16564
+  tu93-0768757b: score=0.00, levels=0.0/9, actions=2, tokens=8555
+  vc33-5430563c: score=9.43, levels=2.0/7, actions=34, tokens=25854
+  wa30-ee6fef47: score=0.00, levels=0.0/9, actions=16, tokens=5228

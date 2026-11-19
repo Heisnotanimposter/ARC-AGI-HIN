@@ -1,0 +1,31 @@
+# Operating System Files
+*.DS_Store
+*.DS_store
+.DS_Store
+.DS_store
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Logs and Archives
+*.log
+*.zip
+
+# Temporary files
+temp/
+tmp/
+
+# Tier R1 portable audit reproducibility package (GA-01 allowlist — 28 required logs: 27 V10 + 1 V6 smoke)
+!HINAGI 2026/Paper/branch_b_academic/V12_GATE_A_R1_AUDIT/tier_r1_portable_package/submissions/arc3_v10_verified/arc-agi-3-sota.log
+!HINAGI 2026/Paper/branch_b_academic/V12_GATE_A_R1_AUDIT/tier_r1_portable_package/submissions/arc3_v10_verified/serve.log
+!HINAGI 2026/Paper/branch_b_academic/V12_GATE_A_R1_AUDIT/tier_r1_portable_package/submissions/arc3_v10_verified/prompts/*_p0.log
+!HINAGI 2026/Paper/branch_b_academic/V12_GATE_A_R1_AUDIT/tier_r1_portable_package/submissions/arc3_v6_smoke_verified/arc-agi-3-sota.log
+
+# HINAGI V12 R3.2 Public Release (Apache-2.0 — 28 required logs matching Tier R1 allowlist)
+!HINAGI 2026/Paper/HINAGI_R3_2_PUBLIC_RELEASE/submissions/arc3_v10_verified/arc-agi-3-sota.log
+!HINAGI 2026/Paper/HINAGI_R3_2_PUBLIC_RELEASE/submissions/arc3_v10_verified/serve.log
+!HINAGI 2026/Paper/HINAGI_R3_2_PUBLIC_RELEASE/submissions/arc3_v10_verified/prompts/*_p0.log
+!HINAGI 2026/Paper/HINAGI_R3_2_PUBLIC_RELEASE/submissions/arc3_v6_smoke_verified/arc-agi-3-sota.log

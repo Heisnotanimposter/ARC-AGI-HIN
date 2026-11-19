@@ -1,0 +1,28 @@
+# ARC-AGI-2 NVARC+ SOTA Inference & AugScore Configuration
+
+model:
+  backbone: "sorokin/arc2-qwen3-unsloth-flash-lora"
+  compact_vocab_size: 64
+  max_sequence_length: 2048
+
+dfs_search:
+  cumulative_prob_cutoff: 0.05
+  max_depth: 900
+  max_candidates_per_task: 16
+
+augscore_verification:
+  enable_d4_dihedral: true
+  num_color_permutations: 4
+  weight_aug_score: 0.60
+  weight_raw_score: 0.25
+  weight_color_score: 0.15
+
+symbolic_synthesis:
+  max_chain_depth: 2
+  train_verification_threshold: 100.0  # Must match 100% train pairs
+  priority_attempt: 1
+
+runtime_limits:
+  max_seconds_per_task: 45.0
+  early_exit_confidence: 95.0
+  emergency_timeout_seconds: 30600.0  # 8.5 hours

@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "document_id": "15_FINAL_EVIDENCE_LEDGER",
+    "audit_scope": "Final evidence-driven reconciliation over 10_INDEPENDENT_REDTEAM_REVIEW.md, 11_INDEPENDENT_ARITHMETIC_CHECK.py, and 12_INDEPENDENT_ARITHMETIC_RESULTS.json cross-checked against raw V10/V6 artifacts, tool_agent.py, taaf/game.py, Paper/ARC3_Version_History_Evidence_Ledger.md, and ARC3_Paper_v10_draft.tex",
+    "companion_documents": [
+      "HINAGI 2026/Paper/branch_b_academic/analysis/v10_forensic_reconciliation/13_FORENSIC_ERRATA.md",
+      "HINAGI 2026/Paper/branch_b_academic/analysis/v10_forensic_reconciliation/14_MANUSCRIPT_CLAIM_GATE.md"
+    ],
+    "non_mutation_policy": "Canonical artifacts, notebooks, source files, reports 00-12, and ARC3_Paper_v10_draft.tex/.pdf preserved byte-for-byte unmodified.",
+    "evidence_tiers": [
+      "E1-SOURCE",
+      "E2-CONFIG",
+      "E3-LOCAL-LOG",
+      "E4-OFFLINE",
+      "UNVERIFIED / REPORTED"
+    ],
+    "valid_verdicts": [
+      "ACCEPT",
+      "ACCEPT WITH QUALIFICATION",
+      "HOLD"
+    ]
+  },
+  "check_1_calibration_provenance": {
+    "source_symbol": "_calibrate_from_usage",
+    "source_lines": "tool_agent.py:5962-6008",
+    "clamp_bounds": [1.0, 3.3],
+    "clamp_source_lines": "tool_agent.py:2903,2919,5996",
+    "reconciled_counts": {
+      "distinct_emissions": 45,
+      "clamped_at_3_30": 26,
+      "clamped_initial_calls_from_4_30": 25,
+      "clamped_subsequent_calls": 1,
+      "unclamped_emissions": 19,
+      "linked_1to1_to_requests_jsonl_responses": 45,
+      "events_jsonl_unique_files": 25,
+      "events_jsonl_matching_lines": 42,
+      "events_jsonl_substring_occurrences": 45,
+      "events_jsonl_multi_emission_lines": [
+        {
+          "file": "submissions/arc3_v10_verified/artifacts/bp35-0a0ad940_p0_events.jsonl",
+          "line": 3,
+          "analysis_step": 1,
+          "emission_ids": ["A02", "A03"]
+        },
+        {
+          "file": "submissions/arc3_v10_verified/artifacts/bp35-0a0ad940_p0_events.jsonl",
+          "line": 14,
+          "analysis_step": 5,
+          "emission_ids": ["A05", "A06"]
+        },
+        {
+          "file": "submissions/arc3_v10_verified/artifacts/tn36-ef4dde99_p0_events.jsonl",
+          "line": 3,
+          "analysis_step": 1,
+          "emission_ids": ["A36", "A37"]
+        }
+      ],
+      "transcripts_unique_files": 25,
+      "transcripts_matching_lines": 45,
+      "transcripts_substring_occurrences": 45,
+      "solver_analysis_html_unique_files": 25,
+      "solver_analysis_html_matching_lines": 45,
+      "solver_analysis_html_substring_occurrences": 45,
+      "prompts_log_unique_files": 2,
+      "prompts_log_matching_lines": 2,
+      "prompts_log_substring_occurrences": 2,
+      "prompts_log_duplicates": [
+        {
+          "file": "submissions/arc3_v10_verified/prompts/ft09-0d8bbf25_p0.log",
+          "line": 941,
+          "note": "LATEST MODEL CALL SNAPSHOT duplicate of A16",
+          "emission_id": "A16"
+        },
+        {
+          "file": "submissions/arc3_v10_verified/prompts/sk48-d8078629_p0.log",
+          "line": 795,
+          "note": "LATEST MODEL CALL SNAPSHOT duplicate of A33",
+          "emission_id": "A33"
+        }
+      ],
+      "total_unique_files_across_v10_tree": 77,
+      "total_matching_lines_across_v10_tree": 134,
+      "total_substring_occurrences_across_v10_tree": 137
+    },
+    "timestamp_availability_note": "Neither *_p0_events.jsonl nor *_p0_requests.jsonl records per-event timestamps; all 45 emissions join 1:1 by exact prompt_tokens to *_p0_requests.jsonl responses and via 02_REQUEST_RESPONSE_RECONSTRUCTION.csv to serve.log UTC completion timestamps.",
+    "emissions": [
+      {"id": "A01", "game_id": "ar25-0c556536", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 636, "serve_log_utc": "2026-10-30 05:18:43", "prompt_tok": 6051, "img_tok": 402, "text_chars": 24273, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A02", "game_id": "bp35-0a0ad940", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 203, "serve_log_utc": "2026-10-30 05:16:06", "prompt_tok": 6045, "img_tok": 402, "text_chars": 24256, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A03", "game_id": "bp35-0a0ad940", "events_line": 3, "transcript_line": 385, "html_line": 386, "c_idx": 1, "resp_line": 4, "ast": 1, "act": 1, "rit": 2, "serve_log_lf_line": 248, "serve_log_utc": "2026-10-30 05:16:20", "prompt_tok": 11464, "img_tok": 402, "text_chars": 34783, "observed_cal": 3.14, "raw_unclamped": null, "clamped": false},
+      {"id": "A04", "game_id": "bp35-0a0ad940", "events_line": 13, "transcript_line": 1357, "html_line": 1358, "c_idx": 7, "resp_line": 16, "ast": 4, "act": 4, "rit": 1, "serve_log_lf_line": 603, "serve_log_utc": "2026-10-30 05:18:30", "prompt_tok": 27688, "img_tok": 2814, "text_chars": 80505, "observed_cal": 3.24, "raw_unclamped": null, "clamped": false},
+      {"id": "A05", "game_id": "bp35-0a0ad940", "events_line": 14, "transcript_line": 1881, "html_line": 1882, "c_idx": 12, "resp_line": 26, "ast": 5, "act": 9, "rit": 3, "serve_log_lf_line": 860, "serve_log_utc": "2026-10-30 05:19:58", "prompt_tok": 37468, "img_tok": 3618, "text_chars": 106769, "observed_cal": 3.15, "raw_unclamped": null, "clamped": false},
+      {"id": "A06", "game_id": "bp35-0a0ad940", "events_line": 14, "transcript_line": 2051, "html_line": 2052, "c_idx": 13, "resp_line": 28, "ast": 5, "act": 9, "rit": 4, "serve_log_lf_line": 938, "serve_log_utc": "2026-10-30 05:20:33", "prompt_tok": 40934, "img_tok": 3618, "text_chars": 113934, "observed_cal": 3.05, "raw_unclamped": null, "clamped": false},
+      {"id": "A07", "game_id": "cd82-fb555c5d", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 694, "serve_log_utc": "2026-10-30 05:19:02", "prompt_tok": 6048, "img_tok": 402, "text_chars": 24267, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A08", "game_id": "cn04-2fe56bfb", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 196, "serve_log_utc": "2026-10-30 05:16:05", "prompt_tok": 6048, "img_tok": 402, "text_chars": 24267, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A09", "game_id": "dc22-fdcac232", "events_line": 4, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 2, "rit": 1, "serve_log_lf_line": 201, "serve_log_utc": "2026-10-30 05:16:05", "prompt_tok": 6048, "img_tok": 402, "text_chars": 24284, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A10", "game_id": "ft09-0d8bbf25", "events_line": 2, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 791, "serve_log_utc": "2026-10-30 05:19:35", "prompt_tok": 6038, "img_tok": 402, "text_chars": 24237, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A11", "game_id": "ft09-0d8bbf25", "events_line": 5, "transcript_line": 999, "html_line": 1000, "c_idx": 3, "resp_line": 8, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 1415, "serve_log_utc": "2026-10-30 05:24:31", "prompt_tok": 16474, "img_tok": 804, "text_chars": 47787, "observed_cal": 3.05, "raw_unclamped": null, "clamped": false},
+      {"id": "A12", "game_id": "ft09-0d8bbf25", "events_line": 9, "transcript_line": 1289, "html_line": 1290, "c_idx": 4, "resp_line": 10, "ast": 2, "act": 2, "rit": 1, "serve_log_lf_line": 1438, "serve_log_utc": "2026-10-30 05:24:48", "prompt_tok": 19019, "img_tok": 1206, "text_chars": 53121, "observed_cal": 2.98, "raw_unclamped": null, "clamped": false},
+      {"id": "A13", "game_id": "ft09-0d8bbf25", "events_line": 11, "transcript_line": 1549, "html_line": 1550, "c_idx": 5, "resp_line": 12, "ast": 3, "act": 5, "rit": 1, "serve_log_lf_line": 1452, "serve_log_utc": "2026-10-30 05:24:52", "prompt_tok": 21881, "img_tok": 1608, "text_chars": 61786, "observed_cal": 3.05, "raw_unclamped": null, "clamped": false},
+      {"id": "A14", "game_id": "ft09-0d8bbf25", "events_line": 19, "transcript_line": 2267, "html_line": 2268, "c_idx": 9, "resp_line": 20, "ast": 5, "act": 12, "rit": 2, "serve_log_lf_line": 1686, "serve_log_utc": "2026-10-30 05:27:14", "prompt_tok": 32436, "img_tok": 2814, "text_chars": 87076, "observed_cal": 2.94, "raw_unclamped": null, "clamped": false},
+      {"id": "A15", "game_id": "ft09-0d8bbf25", "events_line": 34, "transcript_line": 2630, "html_line": 2631, "c_idx": 10, "resp_line": 22, "ast": 5, "act": 12, "rit": 1, "serve_log_lf_line": 1700, "serve_log_utc": "2026-10-30 05:27:25", "prompt_tok": 37071, "img_tok": 2814, "text_chars": 98906, "observed_cal": 2.89, "raw_unclamped": null, "clamped": false},
+      {"id": "A16", "game_id": "ft09-0d8bbf25", "events_line": 37, "transcript_line": 3261, "html_line": 3262, "c_idx": 13, "resp_line": 28, "ast": 7, "act": 27, "rit": 1, "serve_log_lf_line": 1947, "serve_log_utc": "2026-10-30 05:29:46", "prompt_tok": 27056, "img_tok": 2412, "text_chars": 77385, "observed_cal": 3.14, "raw_unclamped": null, "clamped": false, "prompts_log_duplicate": {"file": "prompts/ft09-0d8bbf25_p0.log", "line": 941}},
+      {"id": "A17", "game_id": "g50t-5849a774", "events_line": 3, "transcript_line": 145, "html_line": 146, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 947, "serve_log_utc": "2026-10-30 05:20:36", "prompt_tok": 6033, "img_tok": 402, "text_chars": 24202, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A18", "game_id": "ka59-38d34dbb", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 194, "serve_log_utc": "2026-10-30 05:16:05", "prompt_tok": 6046, "img_tok": 402, "text_chars": 24260, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A19", "game_id": "lf52-271a04aa", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 475, "serve_log_utc": "2026-10-30 05:17:42", "prompt_tok": 6049, "img_tok": 402, "text_chars": 24266, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A20", "game_id": "lp85-305b61c3", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 211, "serve_log_utc": "2026-10-30 05:16:07", "prompt_tok": 6038, "img_tok": 402, "text_chars": 24237, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A21", "game_id": "lp85-305b61c3", "events_line": 19, "transcript_line": 1844, "html_line": 1845, "c_idx": 8, "resp_line": 18, "ast": 7, "act": 10, "rit": 1, "serve_log_lf_line": 1417, "serve_log_utc": "2026-10-30 05:24:31", "prompt_tok": 31126, "img_tok": 3216, "text_chars": 89951, "observed_cal": 3.22, "raw_unclamped": null, "clamped": false},
+      {"id": "A22", "game_id": "ls20-9607627b", "events_line": 3, "transcript_line": 145, "html_line": 146, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 825, "serve_log_utc": "2026-10-30 05:19:48", "prompt_tok": 6031, "img_tok": 402, "text_chars": 24195, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A23", "game_id": "m0r0-492f87ba", "events_line": 6, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 188, "serve_log_utc": "2026-10-30 05:16:04", "prompt_tok": 6048, "img_tok": 402, "text_chars": 24267, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A24", "game_id": "r11l-495a7899", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 522, "serve_log_utc": "2026-10-30 05:17:59", "prompt_tok": 6038, "img_tok": 402, "text_chars": 24237, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A25", "game_id": "r11l-495a7899", "events_line": 9, "transcript_line": 968, "html_line": 969, "c_idx": 5, "resp_line": 12, "ast": 3, "act": 6, "rit": 2, "serve_log_lf_line": 1028, "serve_log_utc": "2026-10-30 05:21:19", "prompt_tok": 20516, "img_tok": 2010, "text_chars": 60105, "observed_cal": 3.25, "raw_unclamped": null, "clamped": false},
+      {"id": "A26", "game_id": "r11l-495a7899", "events_line": 12, "transcript_line": 1313, "html_line": 1314, "c_idx": 6, "resp_line": 14, "ast": 3, "act": 6, "rit": 1, "serve_log_lf_line": 1079, "serve_log_utc": "2026-10-30 05:21:39", "prompt_tok": 31465, "img_tok": 2412, "text_chars": 92262, "observed_cal": 3.18, "raw_unclamped": null, "clamped": false},
+      {"id": "A27", "game_id": "r11l-495a7899", "events_line": 19, "transcript_line": 2575, "html_line": 2576, "c_idx": 12, "resp_line": 26, "ast": 5, "act": 11, "rit": 1, "serve_log_lf_line": 1679, "serve_log_utc": "2026-10-30 05:27:11", "prompt_tok": 27403, "img_tok": 1608, "text_chars": 88005, "observed_cal": 3.30, "raw_unclamped": 3.41, "clamped": true},
+      {"id": "A28", "game_id": "re86-8af5384d", "events_line": 3, "transcript_line": 145, "html_line": 146, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 186, "serve_log_utc": "2026-10-30 05:16:04", "prompt_tok": 6033, "img_tok": 402, "text_chars": 24202, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A29", "game_id": "s5i5-18d95033", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 439, "serve_log_utc": "2026-10-30 05:17:25", "prompt_tok": 6038, "img_tok": 402, "text_chars": 24237, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A30", "game_id": "sb26-7fbdac44", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 676, "serve_log_utc": "2026-10-30 05:18:56", "prompt_tok": 6043, "img_tok": 402, "text_chars": 24250, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A31", "game_id": "sc25-635fd71a", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 547, "serve_log_utc": "2026-10-30 05:18:08", "prompt_tok": 6046, "img_tok": 402, "text_chars": 24260, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A32", "game_id": "sk48-d8078629", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 192, "serve_log_utc": "2026-10-30 05:16:04", "prompt_tok": 6049, "img_tok": 402, "text_chars": 24266, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A33", "game_id": "sk48-d8078629", "events_line": 8, "transcript_line": 1387, "html_line": 1388, "c_idx": 7, "resp_line": 16, "ast": 3, "act": 3, "rit": 1, "serve_log_lf_line": 1630, "serve_log_utc": "2026-10-30 05:26:34", "prompt_tok": 27725, "img_tok": 2412, "text_chars": 80639, "observed_cal": 3.19, "raw_unclamped": null, "clamped": false, "prompts_log_duplicate": {"file": "prompts/sk48-d8078629_p0.log", "line": 795}},
+      {"id": "A34", "game_id": "sp80-589a99af", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 616, "serve_log_utc": "2026-10-30 05:18:34", "prompt_tok": 6048, "img_tok": 402, "text_chars": 24267, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A35", "game_id": "su15-1944f8ab", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 863, "serve_log_utc": "2026-10-30 05:19:59", "prompt_tok": 6041, "img_tok": 402, "text_chars": 24243, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A36", "game_id": "tn36-ef4dde99", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 184, "serve_log_utc": "2026-10-30 05:16:04", "prompt_tok": 6038, "img_tok": 402, "text_chars": 24237, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A37", "game_id": "tn36-ef4dde99", "events_line": 3, "transcript_line": 281, "html_line": 282, "c_idx": 1, "resp_line": 4, "ast": 1, "act": 1, "rit": 2, "serve_log_lf_line": 217, "serve_log_utc": "2026-10-30 05:16:10", "prompt_tok": 9968, "img_tok": 402, "text_chars": 29382, "observed_cal": 3.07, "raw_unclamped": null, "clamped": false},
+      {"id": "A38", "game_id": "tn36-ef4dde99", "events_line": 5, "transcript_line": 635, "html_line": 636, "c_idx": 4, "resp_line": 10, "ast": 2, "act": 2, "rit": 1, "serve_log_lf_line": 316, "serve_log_utc": "2026-10-30 05:16:39", "prompt_tok": 14623, "img_tok": 1206, "text_chars": 41683, "observed_cal": 3.11, "raw_unclamped": null, "clamped": false},
+      {"id": "A39", "game_id": "tn36-ef4dde99", "events_line": 10, "transcript_line": 1131, "html_line": 1132, "c_idx": 7, "resp_line": 16, "ast": 4, "act": 4, "rit": 1, "serve_log_lf_line": 444, "serve_log_utc": "2026-10-30 05:17:25", "prompt_tok": 20134, "img_tok": 2814, "text_chars": 55811, "observed_cal": 3.22, "raw_unclamped": null, "clamped": false},
+      {"id": "A40", "game_id": "tn36-ef4dde99", "events_line": 12, "transcript_line": 1369, "html_line": 1370, "c_idx": 8, "resp_line": 18, "ast": 5, "act": 6, "rit": 1, "serve_log_lf_line": 462, "serve_log_utc": "2026-10-30 05:17:38", "prompt_tok": 23316, "img_tok": 3618, "text_chars": 64607, "observed_cal": 3.28, "raw_unclamped": null, "clamped": false},
+      {"id": "A41", "game_id": "tr87-cd924810", "events_line": 3, "transcript_line": 145, "html_line": 146, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 909, "serve_log_utc": "2026-10-30 05:20:15", "prompt_tok": 6031, "img_tok": 402, "text_chars": 24195, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A42", "game_id": "tr87-cd924810", "events_line": 39, "transcript_line": 2579, "html_line": 2580, "c_idx": 14, "resp_line": 30, "ast": 7, "act": 31, "rit": 2, "serve_log_lf_line": 1940, "serve_log_utc": "2026-10-30 05:29:44", "prompt_tok": 40101, "img_tok": 3618, "text_chars": 113893, "observed_cal": 3.12, "raw_unclamped": null, "clamped": false},
+      {"id": "A43", "game_id": "tu93-0768757b", "events_line": 3, "transcript_line": 145, "html_line": 146, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 206, "serve_log_utc": "2026-10-30 05:16:06", "prompt_tok": 6031, "img_tok": 402, "text_chars": 24195, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A44", "game_id": "vc33-5430563c", "events_line": 3, "transcript_line": 146, "html_line": 147, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 849, "serve_log_utc": "2026-10-30 05:19:55", "prompt_tok": 6038, "img_tok": 402, "text_chars": 24237, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true},
+      {"id": "A45", "game_id": "wa30-ee6fef47", "events_line": 3, "transcript_line": 145, "html_line": 146, "c_idx": 0, "resp_line": 2, "ast": 1, "act": 1, "rit": 1, "serve_log_lf_line": 754, "serve_log_utc": "2026-10-30 05:19:23", "prompt_tok": 6033, "img_tok": 402, "text_chars": 24202, "observed_cal": 3.30, "raw_unclamped": 4.30, "clamped": true}
+    ]
+  },
+  "check_2_eviction_reconstruction": {
+    "replay_summary": {
+      "post_initial_boundaries_replayed": 177,
+      "open_request_byte_matches": 177,
+      "history_messages_count_matches": 177,
+      "calibration_matches": 45,
+      "evicted_games_count": 9,
+      "l6323_end_of_invocation_triggers": 4,
+      "l6699_next_opener_triggers": 5,
+      "l6330_drops": 0,
+      "l6743_drops": 0,
+      "max_asst_in_any_req": 21,
+      "max_asst_eos": 19,
+      "preserve_recent_default": 1,
+      "b_tok": 44544,
+      "b_target": 28160,
+      "evicted_cohort_phase_counts": {
+        "Pre": {"assistant_turns": 179, "bF": 6},
+        "EvStep": {"assistant_turns": 16, "bF": 3},
+        "Later": {"assistant_turns": 9, "bF": 0},
+        "Total": {"assistant_turns": 204, "bF": 9}
+      },
+      "non_evicted_cohort_assistant_turns": 182
+    },
+    "execution_order": [
+      "tool_agent.py:7184 finally -> _persistent_history_messages(messages, tools) (L6313-6350)",
+      "tool_agent.py:6316 _prune_control_messages(messages)",
+      "tool_agent.py:6321 _apply_history_image_window(messages, keep_images=4)",
+      "tool_agent.py:6323 _trim_messages_for_context(messages, tools=tools, preserve_recent=1 [L6459])",
+      "tool_agent.py:6330-6335 _keep_recent_history_turns(max_turns=36, drain_turns=12, force_drain=...)",
+      "tool_agent.py:6336-6344 user-opener boundary guard & _drop_until_first_user_message",
+      "tool_agent.py:6698-6703 append opening_message & _trim_messages_for_context(..., preserve_recent=1) [L6699]",
+      "tool_agent.py:6743 pre-call trim inside multi-turn tool loop"
+    ],
+    "games": [
+      {"game_id": "ar25-0c556536", "transition": "11->12", "step_note": "a32", "cal": 3.30, "pre_prune_raw_eos_est": 45548, "pre_prune_msgs": 46, "l6316_pruned_msgs": 0, "post_prune_est": 45548, "l6321_win4_eos_est": 44748, "l6323_triggered": true, "post_l6323_est": 25678, "post_l6323_msgs": 18, "hm": 17, "l6699_pre_open_est": 27491, "l6699_pre_open_msgs": 19, "l6699_triggered": false, "final_submitted_est": 27491, "final_submitted_msgs": 19, "trigger_location": "end_of_invocation_L6323", "errata_resolved": "replaces .tex#L933 44729"},
+      {"game_id": "ft09-0d8bbf25", "transition": "9->10", "step_note": "a27", "cal": 2.8885, "pre_prune_raw_eos_est": 45771, "pre_prune_msgs": 33, "l6316_pruned_msgs": 0, "post_prune_est": 45771, "l6321_win4_eos_est": 44972, "l6323_triggered": true, "post_l6323_est": 27360, "post_l6323_msgs": 16, "hm": 15, "l6699_pre_open_est": 29203, "l6699_pre_open_msgs": 17, "l6699_triggered": false, "final_submitted_est": 29203, "final_submitted_msgs": 17, "trigger_location": "end_of_invocation_L6323", "errata_resolved": "replaces .tex#L933 44950"},
+      {"game_id": "r11l-495a7899", "transition": "7->8", "step_note": "s5,a11", "cal": 3.1250, "pre_prune_raw_eos_est": 52675, "pre_prune_msgs": 30, "l6316_pruned_msgs": 0, "post_prune_est": 52675, "l6321_win4_eos_est": 52276, "l6323_triggered": true, "post_l6323_est": 28102, "post_l6323_msgs": 13, "hm": 12, "l6699_pre_open_est": 29770, "l6699_pre_open_msgs": 14, "l6699_triggered": false, "final_submitted_est": 29770, "final_submitted_msgs": 14, "trigger_location": "end_of_invocation_L6323", "errata_resolved": "finally: after turn_token_budget yield (step_executed=False); not turn commit"},
+      {"game_id": "sb26-7fbdac44", "transition": "13->14", "step_note": "s12,a34", "cal": 3.30, "pre_prune_raw_eos_est": 49860, "pre_prune_msgs": 57, "l6316_pruned_msgs": 0, "post_prune_est": 49860, "l6321_win4_eos_est": 49060, "l6323_triggered": true, "post_l6323_est": 27199, "post_l6323_msgs": 23, "hm": 22, "l6699_pre_open_est": 28552, "l6699_pre_open_msgs": 24, "l6699_triggered": false, "final_submitted_est": 28552, "final_submitted_msgs": 24, "trigger_location": "end_of_invocation_L6323", "errata_resolved": "finally: after turn_token_budget yield; replaces .tex#L933 49041"},
+      {"game_id": "bp35-0a0ad940", "transition": "5->6", "step_note": "s5,a9", "cal": 3.0532, "pre_prune_raw_eos_est": 44013, "pre_prune_msgs": 34, "l6316_pruned_msgs": 0, "post_prune_est": 44013, "l6321_win4_eos_est": 43613, "l6323_triggered": false, "post_l6323_est": null, "post_l6323_msgs": null, "hm": 33, "l6699_pre_open_est": 45050, "l6699_pre_open_msgs": 35, "l6699_triggered": true, "final_submitted_est": 25183, "final_submitted_msgs": 18, "trigger_location": "next_opener_L6699", "errata_resolved": "replaces 05#L35 un-windowed 45450"},
+      {"game_id": "cd82-fb555c5d", "transition": "9->10", "step_note": "a11", "cal": 3.30, "pre_prune_raw_eos_est": 44023, "pre_prune_msgs": 38, "l6316_pruned_msgs": 0, "post_prune_est": 44023, "l6321_win4_eos_est": 43223, "l6323_triggered": false, "post_l6323_est": null, "post_l6323_msgs": null, "hm": 37, "l6699_pre_open_est": 45249, "l6699_pre_open_msgs": 39, "l6699_triggered": true, "final_submitted_est": 27681, "final_submitted_msgs": 16, "trigger_location": "next_opener_L6699", "errata_resolved": "replaces 05#L36 46048 and .tex#L933 45230"},
+      {"game_id": "cn04-2fe56bfb", "transition": "7->8", "step_note": "a25", "cal": 3.2561, "pre_prune_raw_eos_est": 44736, "pre_prune_msgs": null, "l6316_pruned_msgs": 0, "post_prune_est": 44736, "l6321_win4_eos_est": 43936, "l6323_triggered": false, "post_l6323_est": null, "post_l6323_msgs": null, "hm": 31, "l6699_pre_open_est": 45993, "l6699_pre_open_msgs": 33, "l6699_triggered": true, "final_submitted_est": 26222, "final_submitted_msgs": 17, "trigger_location": "next_opener_L6699", "errata_resolved": "L6321 win4 prevented L6323 on pre-window 44736; replaces 05#L37 46793 and .tex#L933 45974"},
+      {"game_id": "g50t-5849a774", "transition": "7->8", "step_note": "a13", "cal": 3.30, "pre_prune_raw_eos_est": 42922, "pre_prune_msgs": 32, "l6316_pruned_msgs": 0, "post_prune_est": 42922, "l6321_win4_eos_est": 42523, "l6323_triggered": false, "post_l6323_est": null, "post_l6323_msgs": null, "hm": 31, "l6699_pre_open_est": 44645, "l6699_pre_open_msgs": 33, "l6699_triggered": true, "final_submitted_est": 14937, "final_submitted_msgs": 7, "trigger_location": "next_opener_L6699", "errata_resolved": "replaces 05#L38 un-windowed 45045"},
+      {"game_id": "vc33-5430563c", "transition": "10->11", "step_note": "a26", "cal": 3.30, "pre_prune_raw_eos_est": 45096, "pre_prune_msgs": null, "l6316_pruned_msgs": 1, "post_prune_est": 43572, "l6321_win4_eos_est": 43572, "l6323_triggered": false, "post_l6323_est": null, "post_l6323_msgs": null, "hm": 44, "l6699_pre_open_est": 45630, "l6699_pre_open_msgs": 46, "l6699_triggered": true, "final_submitted_est": 27212, "final_submitted_msgs": 18, "trigger_location": "next_opener_L6699", "errata_resolved": "L6316 stripped pm[43] (-1524 tok) before L6321; fixes 05#L39 42769/45627 and 11/12 pre_raw_eos_est=43572"}
+    ],
+    "near_miss_game": {
+      "game_id": "tr87-cd924810",
+      "transition": "8->9",
+      "cal": 3.1113,
+      "pre_prune_raw_eos_est": 43677,
+      "pre_prune_msgs": 40,
+      "l6316_pruned_msgs": 0,
+      "post_prune_est": 43677,
+      "l6321_win4_eos_est": 42877,
+      "l6323_triggered": false,
+      "hm": 39,
+      "l6699_pre_open_est": 44318,
+      "l6699_pre_open_msgs": 41,
+      "l6699_triggered": false,
+      "margin_below_b_tok": 226,
+      "trigger_location": "none",
+      "errata_resolved": "replaces 10#L123, 11#L845, and 12 tr87_peak_eos_est=42028"
+    }
+  },
+  "check_3_token_accounting": {
+    "action_attributed_benchmark_json": {
+      "completion_tokens": 378304,
+      "per_game_exact_diff_count": 25
+    },
+    "per_game_paired_352": {
+      "responses": 352,
+      "prompt_tokens": 7078878,
+      "cached_tokens": 4480704,
+      "cached_rate": 0.6329681059625551,
+      "uncached_tokens": 2598174,
+      "image_tokens": 762400,
+      "completion_tokens": 468510,
+      "reasoning_tokens": 404005,
+      "reasoning_share_of_completion": 0.8623188405797101,
+      "trailing_scope_diff_vs_action_attributed": 90206,
+      "trailing_share": 0.19253804614629358
+    },
+    "detached_g50t_root_response": {
+      "file": "submissions/arc3_v10_verified/requests.jsonl",
+      "game_id": "g50t-5849a774",
+      "c_idx": 15,
+      "ast": 7,
+      "act": 14,
+      "rit": 2,
+      "tool_call_id": "call_786624f58c0f463a951acd79",
+      "serve_log_lf_line": 2005,
+      "serve_log_cr_normalized_line": 2091,
+      "serve_log_utc": "2026-10-30 05:30:19",
+      "prompt_tokens": 19438,
+      "cached_tokens": 16064,
+      "cached_rate": 0.82642247144768,
+      "uncached_tokens": 3374,
+      "image_tokens": 2000,
+      "completion_tokens": 2778,
+      "reasoning_tokens": 2391,
+      "server_output_len": 2780,
+      "race_cause": "tr87 exited at 05:30:06 and reduced *_runtime_state.json <= 1 (tool_agent.py:3238-3240, 3314) between g50t idx=15 request write (L6767) and response write (L6788)"
+    },
+    "full_client_reconstructed_353": {
+      "responses": 353,
+      "prompt_tokens": 7098316,
+      "cached_tokens": 4496768,
+      "cached_rate": 0.6334978606193356,
+      "uncached_tokens": 2601548,
+      "image_tokens": 764400,
+      "completion_tokens": 471288,
+      "equals_solver_note_sum": true,
+      "per_game_solver_note_exact_matches": 25,
+      "reasoning_tokens": 406396,
+      "reasoning_share_of_completion": 0.8623092461509735,
+      "trailing_scope_diff_vs_action_attributed": 92984,
+      "trailing_share": 0.19729761844137768
+    },
+    "four_client_http_read_timeouts": {
+      "client_usage_imputation_policy": "N/A (no-imputation; HTTP read timeout before client payload receipt)",
+      "serve_log_req_time_stats_total": 360,
+      "serve_log_breakdown": {"warmups": 3, "delivered_responses": 353, "timeouts": 4},
+      "delivered_eos_output_len_minus_completion_tokens_histogram": {"0": 104, "1": 56, "2": 111, "3": 82},
+      "server_scope_totals": {
+        "input_tokens": 120483,
+        "cached_tokens": 41408,
+        "server_output_len": 7610,
+        "client_usage_completion_tokens": null
+      },
+      "records": [
+        {"game_id": "cn04-2fe56bfb", "c_idx": 13, "timeout_s": 50.92, "serve_log_lf_line": 1562},
+        {"game_id": "vc33-5430563c", "c_idx": 19, "timeout_s": 30.00, "serve_log_lf_line": 1723},
+        {"game_id": "r11l-495a7899", "c_idx": 13, "timeout_s": 30.00, "serve_log_lf_line": 1787},
+        {"game_id": "cd82-fb555c5d", "c_idx": 14, "timeout_s": 49.14, "serve_log_lf_line": 1879}
+      ]
+    },
+    "kv_prefix_cache_stratification": {
+      "initial": {"n": 25, "prompt": 151030, "cached": 40576, "rate_pct": 26.87, "header_match_hist": {"0": 17, "5056": 6, ">5056": 2}},
+      "pure_append_352": {"n": 250, "prompt": 4600703, "cached": 4073664, "rate_pct": 88.54},
+      "pure_append_353": {"n": 251, "prompt": 4620141, "cached": 4089728, "rate_pct": 88.52},
+      "image_omit_mutation": {"n": 69, "prompt": 2131863, "cached": 331072, "rate_pct": 15.53, "header_match_hist": {"0": 16, "5056": 46, ">5056_partial": 7}, "partial_gt_5056_cached_tokens": 98496},
+      "fifo_eviction": {"n": 8, "prompt": 195282, "cached": 35392, "rate_pct": 18.12, "header_match_hist": {"0": 1, "5056": 7}, "zero_hit_request": "cn04 idx=12 (pt=26297)"},
+      "mutations_combined": {"n": 77, "uncached_tokens": 1960681, "share_of_352_uncached_pct": 75.46, "share_of_353_uncached_pct": 75.37},
+      "g50t_post_eviction_kv_reuse": {"incl_root_rate_pct": 70.00, "incl_root_cached": 33728, "incl_root_prompt": 48182, "excl_root_rate_pct": 61.45, "excl_root_cached": 17664, "excl_root_prompt": 28744}
+    }
+  },
+  "check_4_score_comparability": {
+    "rhae_implementation": "taaf/game.py:381-413",
+    "rhae_recomputation_max_abs_diff": 0.0,
+    "rhae_mismatches": 0,
+    "v10_local": {
+      "artifact": "submissions/arc3_v10_verified/benchmark.json",
+      "active_games": 25,
+      "total_games": 25,
+      "actions": 386,
+      "levels_solved": 13,
+      "levels_total": 183,
+      "score_sum": 70.9375,
+      "mean_over_25": 2.8375,
+      "active_mean_over_25": 2.8375,
+      "ft09_score": 28.571429,
+      "ft09_levels_solved": "3/6",
+      "ft09_share_of_v10_sum": 0.40276898,
+      "remaining_24_sum": 42.366071,
+      "remaining_24_mean_over_24": 1.765253,
+      "remaining_24_contribution_over_25": 1.694643
+    },
+    "v6_smoke_local": {
+      "artifact": "submissions/arc3_v6_smoke_verified/benchmark.json",
+      "active_games": 10,
+      "starved_zero_action_games": 15,
+      "total_games": 25,
+      "actions": 270,
+      "levels_solved": 10,
+      "levels_total": 183,
+      "score_sum": 49.84127,
+      "mean_over_25": 1.993651,
+      "active_mean_over_10": 4.984127,
+      "ft09_score": 0.0,
+      "remaining_24_mean_over_24": 2.07672,
+      "warmup_timer_start_s": 729,
+      "starved_exits_s": 1331
+    },
+    "delta_v10_minus_v6_smoke": 21.09623,
+    "version_ledger_erratum": {
+      "file": "Paper/ARC3_Version_History_Evidence_Ledger.md",
+      "lines": "116,118",
+      "erroneous_values": {"v10_sum": 70.9395, "v10_mean": 2.8376, "diff": 21.0982},
+      "corrected_values": {"v10_sum": 70.9375, "v10_mean": 2.8375, "diff": 21.09623}
+    },
+    "comparability_verdict": "Non-comparable as an architecture-quality contrast (15/25 warmup starvation in V6_SMOKE fixed by V10 Cell 16; 5 cells modified simultaneously [Cells 0, 4, 6, 12, 16]; single-game ft09 outlier provides 40.28% of V10 total while remaining 24 average 1.765253 vs V6 2.076720).",
+    "cell_0_contradictions_and_cell_2_parity": {
+      "cell_2_chars": 498799,
+      "cell_2_sha256": "6fdcd1ae7445c0cfc26eec1047363aa0c196c867d289a35b6f64403b5a43dce2",
+      "cell_2_byte_identical_v6_v10": true,
+      "cell_0_falsified_claims": [
+        "precache_model_thread disabled (still active in Cell 6, delay=30s)",
+        "guarantee zero Read timed out (4 live timeouts observed)",
+        "Lean-4 verification (pure Python Cell 16 helpers solve_state_space / verify_transition)"
+      ]
+    }
+  },
+  "check_5_kaggle_provenance": {
+    "submission_id": 57827259,
+    "reported_public_score": 8.03,
+    "raw_kaggle_api_cli_payloads_found": 0,
+    "primary_in_repo_artifact": {
+      "path": "artifacts/phase5_4/submission_57827259_status.json",
+      "raw_status": "SubmissionStatus.PENDING",
+      "public_score": null,
+      "classification": "OUT_OF_POLICY_EXCEPTION_SUBMISSION"
+    },
+    "supporting_in_repo_audits": [
+      "artifacts/phase5_4/final_submission_selection_audit.md:24 (marks 57827259 UNVERIFIED)",
+      "Paper/ARC3_Version_History_Evidence_Ledger.md:129 (logs missing Kaggle API proof)",
+      "artifacts/phase6_4/reports/phase6_4_competition_performance_bridge.md:20,27 (earliest secondary appearance of 8.03)"
+    ],
+    "classification": "UNVERIFIED / REPORTED",
+    "gate_verdict": "HOLD"
+  },
+  "errata_registry": [
+    {"id": "ERR-01", "category": "Calibration provenance", "affected": ["00#L20,L80", "05#L3,L8,L21,L46", "08#L151", "09#L5,L36", "ARC3_Paper_v10_draft.tex#L933"], "summary": "Replaces unqualified 45/45 shorthand and .tex#L933 unlogged/_update_input_token_calibration with _calibrate_from_usage (45 emissions across 42 event lines, 45 transcript lines, 45 HTML lines, 2 prompt duplicates = 137 occurrences across 77 unique files; 45/45 linked to requests/serve.log)."},
+    {"id": "ERR-02", "category": "Calibration clamp range", "affected": ["05#L17", "06#L17"], "summary": "Fixes wrong [1.8, 4.8] clamp range to source-verified [1.0, 3.3] (tool_agent.py:2903,2919,5996); 26/45 clamped to 3.30."},
+    {"id": "ERR-03", "category": "vc33 control pruning", "affected": ["reconstruct_v10_forensics.py#L501-L529", "05#L39,L99", "07#L16,L27", "08#L747-748"], "summary": "Restores L6316 _prune_control_messages (-1524 tok pm[43]) before L6321 win4 on vc33: win4 EOS is 43572 and L6699 pre_open_est is 45630 (replacing 42769/45627)."},
+    {"id": "ERR-04", "category": "11/12 vc33 raw EOS & preserve_recent", "affected": ["11_INDEPENDENT_ARITHMETIC_CHECK.py#L896,L907,L914", "12_INDEPENDENT_ARITHMETIC_RESULTS.json"], "summary": "Restores vc33 pre-prune raw EOS 45096 (vs post-prune 43572) and corrects preserve_recent=0 to default preserve_recent=1 (tool_agent.py:6459)."},
+    {"id": "ERR-05", "category": "cn04 pre-window crossing", "affected": ["05#L37"], "summary": "Establishes cn04 pre_raw_eos_est=44736 is NOT an eviction trigger because L6321 win4 reduced it to 43936<=44544 before L6699 (45993)."},
+    {"id": "ERR-06", "category": "L6699 pre-trim payload", "affected": ["05#L35-39,L42,L44,L46,L99,L103", "07#L16,L27"], "summary": "Replaces un-windowed pre_raw_est with true post-prune/post-win4 next-opener L6699 inputs: bp35 45050, cd82 45249, cn04 45993, g50t 44645, vc33 45630."},
+    {"id": "ERR-07", "category": "tr87 peak EOS estimate", "affected": ["10#L123", "11#L845", "12_INDEPENDENT_ARITHMETIC_RESULTS.json"], "summary": "Replaces 42028 with true L6321 win4 EOS 42877 (raw 43677; pre_open_est 44318, 226 below B_tok)."},
+    {"id": "ERR-08", "category": ".tex#L933 naming & offsets", "affected": ["ARC3_Paper_v10_draft.tex#L933", "05#L31-34"], "summary": "Fixes _update_input_token_calibration, unlogged, turn commit -> end_of_invocation_L6323, and ar25/ft09/sb26/cd82/cn04 threshold values."},
+    {"id": "ERR-09", "category": "352 vs 353 & 5 unpaired", "affected": ["v10_eviction_and_token_audit_report.md", "build_v10_eviction_token_tables.py", "ARC3_Paper_v10_draft.tex#L87,L157,L184,L195,L906,L909,L918,L920,L925,L927,L951,L963"], "summary": "Accounts for detached g50t idx=15 (+2778 comp), separating 1 detached root + 4 timeouts and updating g50t post-eviction KV reuse to 70.00% (61.45% excl. root)."},
+    {"id": "ERR-10", "category": "Timeout imputation & serve.log CR", "affected": ["ARC3_Paper_v10_draft.tex#L918,L1003"], "summary": "Retains 4 timeouts as N/A in client usage, isolates serve.log output_len=7610 to server scope ({0,+1,+2,+3} EOS diff), and uses LF-split serve.log line numbers."},
+    {"id": "ERR-11", "category": "Red Team C1 KV header math", "affected": ["ARC3_Paper_v10_draft.tex#L928-929", "Fig 2B"], "summary": "Reconciles 35392 (7*5056 + 1*0) and 331072 (16*0 + 46*5056 + 7 partial=98496) histograms cleanly while withholding causal GPU LRU attribution."},
+    {"id": "ERR-12", "category": "V10 local score sum typo", "affected": ["Paper/ARC3_Version_History_Evidence_Ledger.md#L116,L118"], "summary": "Fixes 70.9395 -> 70.9375, 2.8376 -> 2.8375, +21.0982 -> +21.096230."},
+    {"id": "ERR-13", "category": "Cell 0 contradictions & Cell 2/4 attribution", "affected": ["ARC3_Paper_v10_draft.tex#L629-631,L654"], "summary": "Flags V10 Cell 0's 3 falsified claims (precache_model_thread, zero-timeout guarantee, Lean-4) and confirms Cell 2 vs Cell 4 attribution."},
+    {"id": "ERR-14", "category": "External LB provenance (57827259 / 8.03)", "affected": ["ARC3_Paper_v10_draft.tex#L85,L194,L684,L719,L751,L886,L1000,L1011", "00#L23,L49,L84", "07#L14,L38-40", "10#L212,L264"], "summary": "Reclassifies 8.03 from T3 / E4-LB strictly to UNVERIFIED / REPORTED and places on HOLD due to zero raw Kaggle score payloads and PENDING status json."},
+    {"id": "ERR-15", "category": "Non-causal cohort & starvation framing", "affected": ["00#L83", "ARC3_Paper_v10_draft.tex#L85,L701,L922,L963"], "summary": "Constrains V6_SMOKE vs V10 (15/25 starved vs ft09 40.28% outlier) and n=9 vs n=16 cohort comparisons (204 vs 182 turns) to strictly observational status."}
+  ],
+  "manuscript_claim_gate": [
+    {
+      "claim_id": "C01",
+      "claim": "V10 modified 5 cells (Cells 0, 4, 6, 12, 16) vs V6 while Cell 2 (498,799 chars, computes B_tok=44,544 and B_target=28,160) remained byte-identical and Cell 4 set the 56K window/drain parameters.",
+      "evidence_tier": "E1-SOURCE",
+      "source_paths": ["ARC3_Paper_v10_draft.tex", "06_SOURCE_CODE_TRACE.md", "13_FORENSIC_ERRATA.md"],
+      "source_lines": "L629-631,L654 (.tex)",
+      "calculations": {"cell_2_chars": 498799, "b_tok": 44544, "b_target": 28160, "modified_cells_count": 5},
+      "caveats": "Resolves Red Team C2 attribution cleanly; pair with C13 when mentioning Cell 0 text.",
+      "verdict": "ACCEPT"
+    },
+    {
+      "claim_id": "C02",
+      "claim": "_calibrate_from_usage (tool_agent.py:5962-6008, clamp [1.0, 3.3]) emitted 45 runtime text_token_calibration logs across 42 events.jsonl records (3 dual-emission lines), 45 transcript lines, 45 HTML lines, and 2 prompt snapshot duplicates (137 occurrences across 77 unique files; 26/45 clamped to 3.30; 45/45 linked to responses and serve.log UTC times).",
+      "evidence_tier": "E1-SOURCE",
+      "source_paths": ["reference/arc3_franzen_m2/ARC3-Inference/inference/agent/tool_agent.py", "ARC3_Paper_v10_draft.tex", "13_FORENSIC_ERRATA.md"],
+      "source_lines": "tool_agent.py:2903,2919,5962-6008; .tex#L658,L933",
+      "calculations": {"emissions": 45, "event_records": 42, "unique_files": 77, "substring_hits": 137, "clamped": 26, "unclamped": 19},
+      "caveats": "Replaces .tex#L933 (_update_input_token_calibration / unlogged) and 05/06 ([1.8, 4.8]); maintain explicit record vs emission vs file separation.",
+      "verdict": "ACCEPT"
+    },
+    {
+      "claim_id": "C03",
+      "claim": "Exact ToolAgent replay (177/177 byte and hm matches, l6330_drops=0, l6743_drops=0, preserve_recent=1) confirms 4 end_of_invocation_L6323 triggers (ar25 44,748; ft09 44,972; r11l 52,276; sb26 49,060) and 5 next_opener_L6699 triggers (bp35 45,050; cd82 45,249; cn04 45,993; g50t 44,645; vc33 45,630), L6321/L6316 EOS protection on cn04/vc33, near-miss tr87 peak 42,877/44,318, and 179 Pre / 16 EvStep / 9 Later (6/3/0 bF).",
+      "evidence_tier": "E1-SOURCE",
+      "source_paths": ["reference/arc3_franzen_m2/ARC3-Inference/inference/agent/tool_agent.py", "ARC3_Paper_v10_draft.tex", "13_FORENSIC_ERRATA.md"],
+      "source_lines": "tool_agent.py:6313-6350,6459,6694-6703,6743,7184; .tex#L933",
+      "calculations": {"boundaries": 177, "evicted_games": 9, "l6323": 4, "l6699": 5, "tr87_win4_eos": 42877, "tr87_pre_open": 44318, "bF_pre_ev_later": [6, 3, 0]},
+      "caveats": "Replaces shifted values in .tex#L933 and un-windowed pre_raw_est / tr87=42,028 / vc33=42,769 in prior audit notes.",
+      "verdict": "ACCEPT"
+    },
+    {
+      "claim_id": "C04",
+      "claim": "Client completion tokens reconcile identically across three explicit scopes (25/25 diff=0): 378,304 action-attributed (benchmark.json), 468,510 per-game paired (352 resp; 90,206 trailing=19.25%; 63.30% cached), and 471,288 == sum(solver_note) full-client (353 resp incl. detached g50t root +2,778 comp; 92,984 trailing=19.73%; 63.35% cached; g50t post-evict 70.00%).",
+      "evidence_tier": "E3-LOCAL-LOG",
+      "source_paths": ["submissions/arc3_v10_verified/benchmark.json", "submissions/arc3_v10_verified/requests.jsonl", "03_TOKEN_ACCOUNTING_RECONCILIATION.csv", "ARC3_Paper_v10_draft.tex"],
+      "source_lines": ".tex#L87,L157,L184,L195,L906,L909,L918,L920,L925,L927,L951,L963",
+      "calculations": {"action_attributed": 378304, "per_game_352": 468510, "g50t_root_delta": 2778, "full_client_353": 471288, "trailing_353": 92984},
+      "caveats": "Must co-report or clearly anchor 353 alongside 352 without double-counting, replace '5 unpaired', and update g50t post-eviction KV reuse from 61.5% to 70.00% (61.45% excl. root).",
+      "verdict": "ACCEPT WITH QUALIFICATION"
+    },
+    {
+      "claim_id": "C05",
+      "claim": "The 5 requests absent from *_p0_requests.jsonl consist of 1 detached root response (g50t idx=15, tr87 race at 05:30:06) and 4 client HTTP read timeouts (cn04 idx=13, vc33 idx=19, r11l idx=13, cd82 idx=14) retained un-imputed as N/A in client usage, while serve.log separately logs 7,610 server output_len (vs {0:104,+1:56,+2:111,+3:82} EOS delta on the 353 delivered calls).",
+      "evidence_tier": "E3-LOCAL-LOG",
+      "source_paths": ["submissions/arc3_v10_verified/requests.jsonl", "serve.log", "04_FOUR_UNMATCHED_REQUESTS.md", "ARC3_Paper_v10_draft.tex"],
+      "source_lines": "tool_agent.py:3238-3240,3314,6767,6788; serve.log LF L1562,1723,1787,1879,2005; .tex#L918,L1003",
+      "calculations": {"unreturned_per_game": 5, "detached_root": 1, "client_timeouts": 4, "server_timeout_output_len": 7610, "req_time_stats": 360},
+      "caveats": "Strict no-imputation policy: keep client usage=N/A for timeouts, isolate serve.log 7,610 under server scope only, and cite LF-split serve.log line numbers.",
+      "verdict": "ACCEPT WITH QUALIFICATION"
+    },
+    {
+      "claim_id": "C06",
+      "claim": "Observational KV prefix cache stratification shows initial 26.87% (n=25), pure-append 88.52% (353) / 88.54% (352), image-omit 15.53% (n=69, 331,072 = 16*0 + 46*5,056 + 7 partial 98,496), and fifo-eviction 18.12% (n=8, 35,392 = 7*5,056 + 1*0 at cn04 idx=12), with 77 mutations accounting for 75.37% (353) / 75.46% (352) of uncached prefill.",
+      "evidence_tier": "E3-LOCAL-LOG",
+      "source_paths": ["05_EVICTION_PREFIX_CACHE_REPRODUCTION.md", "ARC3_Paper_v10_draft.tex", "13_FORENSIC_ERRATA.md"],
+      "source_lines": ".tex#L928-929; 13_FORENSIC_ERRATA.md#L22,L148",
+      "calculations": {"initial_pct": 26.87, "pure_append_353_pct": 88.52, "image_omit_pct": 15.53, "fifo_pct": 18.12, "uncached_share_353_pct": 75.37},
+      "caveats": "Must explicitly include zero-hit counts (16 image-omit, 1 cn04 FIFO) per Red Team C1, keep denominators separate, and frame observationally without causal GPU LRU claims.",
+      "verdict": "ACCEPT WITH QUALIFICATION"
+    },
+    {
+      "claim_id": "C07",
+      "claim": "Under exact ARC-AGI-3 RHAE (taaf/game.py:381-413, max_abs_diff=0), V10 local benchmark (25/25 active, 386 actions, 13/183 levels) sums to 70.937500 (mean 2.837500), with ft09 contributing 28.571429 (40.28%) and the remaining 24 games summing to 42.366071 (mean 1.765253).",
+      "evidence_tier": "E1-SOURCE",
+      "source_paths": ["submissions/arc3_v10_verified/benchmark.json", "taaf/game.py", "Paper/ARC3_Version_History_Evidence_Ledger.md"],
+      "source_lines": "taaf/game.py:381-413; Paper/ARC3_Version_History_Evidence_Ledger.md#L116,L118",
+      "calculations": {"v10_sum": 70.9375, "v10_mean_25": 2.8375, "ft09": 28.571429, "ft09_pct": 40.276898, "other_24_sum": 42.366071, "other_24_mean": 1.765253},
+      "caveats": "Corrects 70.9395 typo in Evidence Ledger#L116,L118; must co-disclose ft09 40.28% outlier concentration.",
+      "verdict": "ACCEPT WITH QUALIFICATION"
+    },
+    {
+      "claim_id": "C08",
+      "claim": "Under exact RHAE (max_abs_diff=0), V6_SMOKE scored 49.841270 (/25 mean 1.993651, active /10 mean 4.984127, other-24 mean 2.076720) with 15/25 games starved at 0 actions from pre-readiness timer start (t=729s to t=1331s), whereas V10 Cell 16 restored 25/25 active play.",
+      "evidence_tier": "E1-SOURCE",
+      "source_paths": ["submissions/arc3_v6_smoke_verified/benchmark.json", "taaf/game.py", "13_FORENSIC_ERRATA.md"],
+      "source_lines": "taaf/game.py:381-413; 13_FORENSIC_ERRATA.md#L26,L157,L159",
+      "calculations": {"v6_sum": 49.84127, "v6_mean_25": 1.993651, "v6_active_mean_10": 4.984127, "starved_games": 15, "other_24_mean_v6": 2.07672},
+      "caveats": "Admissible strictly to contrast starved vs active execution and Cell 16 hardening; non-comparable as architecture-quality benchmark.",
+      "verdict": "ACCEPT WITH QUALIFICATION"
+    },
+    {
+      "claim_id": "C09",
+      "claim": "In V10 local logs, the n=9 evicted cohort spans 204 assistant turns (179 Pre / 16 EvStep / 9 Later; bF 6 -> 3 -> 0) vs 182 assistant turns across n=16 non-evicted games.",
+      "evidence_tier": "E4-OFFLINE",
+      "source_paths": ["03_TOKEN_ACCOUNTING_RECONCILIATION.csv", "ARC3_Paper_v10_draft.tex", "13_FORENSIC_ERRATA.md"],
+      "source_lines": ".tex#L85,L701,L922,L963; 13_FORENSIC_ERRATA.md#L26",
+      "calculations": {"evicted_n": 9, "non_evicted_n": 16, "evicted_turns": 204, "non_evicted_turns": 182},
+      "caveats": "Strictly descriptive trajectory metric; confounded by action survival budget and does not imply causal loop reduction.",
+      "verdict": "ACCEPT WITH QUALIFICATION"
+    },
+    {
+      "claim_id": "C10",
+      "claim": "Submission 57827259 achieved official Kaggle Public-Leaderboard score V10 = 8.03.",
+      "evidence_tier": "UNVERIFIED / REPORTED",
+      "source_paths": ["artifacts/phase5_4/submission_57827259_status.json", "artifacts/phase5_4/final_submission_selection_audit.md", "Paper/ARC3_Version_History_Evidence_Ledger.md", "ARC3_Paper_v10_draft.tex"],
+      "source_lines": "submission_57827259_status.json:1-33; final_submission_selection_audit.md:24; Evidence_Ledger:129; .tex#L85,L194,L684,L719,L751,L886,L1000,L1011",
+      "calculations": {"raw_kaggle_payloads_with_8_03": 0, "public_score_in_status_json": null},
+      "caveats": "Status file remains SubmissionStatus.PENDING with public_score=null; supersedes report 10 E4-LB grade; strictly UNVERIFIED / REPORTED until raw Kaggle API/CLI payload is archived.",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C11",
+      "claim": "Unbacked raw leaderboard or held-out comparative percentages (including 33.38, 23.41, and unarchived held-out V6/V10 LB deltas).",
+      "evidence_tier": "UNVERIFIED / REPORTED",
+      "source_paths": ["ARC3_Paper_v10_draft.tex", "00_EXECUTIVE_FINDINGS.md", "10_INDEPENDENT_REDTEAM_REVIEW.md"],
+      "source_lines": "00#L23,L49,L84; 10#L212,L264",
+      "calculations": {"raw_lb_payloads_in_repo": 0},
+      "caveats": "No archived raw Kaggle official API score payloads back these comparative figures in-repo.",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C12",
+      "claim": "Cross-phase live competition / configuration equivalence claims (Phase 6.0 / Phase 6.4 live parity extrapolations).",
+      "evidence_tier": "UNVERIFIED / REPORTED",
+      "source_paths": ["artifacts/phase6_4/reports/phase6_4_competition_performance_bridge.md", "13_FORENSIC_ERRATA.md"],
+      "source_lines": "phase6_4_competition_performance_bridge.md:20,27; 13_FORENSIC_ERRATA.md#L167",
+      "calculations": {"primary_runtime_payload_proof": 0},
+      "caveats": "Secondary bridge reports cannot establish live equivalence while 57827259 remains PENDING in raw in-repo state.",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C13",
+      "claim": "V10 Cell 0 claims that precache_model_thread was disabled, Read timed out was guaranteed to zero, and Lean-4 formal verification ran.",
+      "evidence_tier": "UNVERIFIED / REPORTED",
+      "source_paths": ["ARC3_Paper_v10_draft.tex", "06_SOURCE_CODE_TRACE.md", "13_FORENSIC_ERRATA.md"],
+      "source_lines": ".tex#L629; 13_FORENSIC_ERRATA.md#L24,L160",
+      "calculations": {"live_read_timeouts": 4, "precache_delay_s": 30},
+      "caveats": "Directly falsified by Cell 6, Cell 16 (pure Python helpers solve_state_space / verify_transition), and 4 live timeout logs.",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C14",
+      "claim": "Host prompt edits alone exclusively caused observed KV prefix cache misses without GPU RadixAttention LRU eviction.",
+      "evidence_tier": "E4-OFFLINE",
+      "source_paths": ["ARC3_Paper_v10_draft.tex", "05_EVICTION_PREFIX_CACHE_REPRODUCTION.md", "13_FORENSIC_ERRATA.md"],
+      "source_lines": ".tex#L928-929; 13_FORENSIC_ERRATA.md#L22,L148",
+      "calculations": {"initial_zero_hits": 17, "fifo_zero_hits": 1, "image_omit_zero_hits": 16},
+      "caveats": "Per-request SGLang GPU radix-tree LRU evictions are unlogged; non-mutation zero-hits confirm independent LRU misses.",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C15",
+      "claim": "FIFO eviction causally eliminated behavioral loops (bF 6->3->0) or improved downstream solver quality.",
+      "evidence_tier": "E4-OFFLINE",
+      "source_paths": ["ARC3_Paper_v10_draft.tex", "13_FORENSIC_ERRATA.md"],
+      "source_lines": ".tex#L85,L701,L922,L963; 13_FORENSIC_ERRATA.md#L26",
+      "calculations": {"evicted_turns": 204, "non_evicted_turns": 182},
+      "caveats": "Confounded by action survival depth across n=9 vs n=16 runs with no counterfactual baseline.",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C16",
+      "claim": "V6_SMOKE to V10 local score gain (+21.096230) proves architectural reasoning superiority of context trimming/eviction.",
+      "evidence_tier": "E4-OFFLINE",
+      "source_paths": ["00_EXECUTIVE_FINDINGS.md", "ARC3_Paper_v10_draft.tex", "13_FORENSIC_ERRATA.md"],
+      "source_lines": "00#L83; .tex#L85,L701,L922,L963; 13_FORENSIC_ERRATA.md#L26,L159",
+      "calculations": {"v6_starved_games": 15, "ft09_v10_pct": 40.28, "other_24_v10_mean": 1.765253, "other_24_v6_mean": 2.07672},
+      "caveats": "V6_SMOKE suffered 15/25 warmup starvation, V10 edited 5 cells simultaneously, and non-ft09 24-game mean dropped (1.77 vs 2.08).",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C17",
+      "claim": "Imputing serve.log server output_len (7,610) as client usage.completion_tokens for the 4 timed-out requests.",
+      "evidence_tier": "E3-LOCAL-LOG",
+      "source_paths": ["serve.log", "04_FOUR_UNMATCHED_REQUESTS.md", "ARC3_Paper_v10_draft.tex", "13_FORENSIC_ERRATA.md"],
+      "source_lines": ".tex#L918,L1003; 13_FORENSIC_ERRATA.md#L21,L147",
+      "calculations": {"server_output_len_sum": 7610, "nonzero_eos_delta_calls": 249, "delivered_calls": 353},
+      "caveats": "SGLang output_len differs from usage.completion_tokens on 249/353 delivered calls ({0:104,+1:56,+2:111,+3:82}); breaks solver_note client identity.",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "C18",
+      "claim": "Superseded intermediate audit values: tr87=42,028, vc33=42,769/45,627 (or pre-prune 45,096 as trigger), cn04=44,736 as trigger or 46,793, g50t=45,045, bp35=45,450, cd82=46,048, V10=70.9395, [1.8,4.8], _update_input_token_calibration.",
+      "evidence_tier": "UNVERIFIED / REPORTED",
+      "source_paths": ["05_EVICTION_PREFIX_CACHE_REPRODUCTION.md", "06_SOURCE_CODE_TRACE.md", "07_MANUSCRIPT_CHANGE_RECOMMENDATIONS.md", "10_INDEPENDENT_REDTEAM_REVIEW.md", "11_INDEPENDENT_ARITHMETIC_CHECK.py", "12_INDEPENDENT_ARITHMETIC_RESULTS.json", "Paper/ARC3_Version_History_Evidence_Ledger.md", "ARC3_Paper_v10_draft.tex"],
+      "source_lines": "05#L17,L35-39; 06#L17; 10#L123; 11#L845,L896,L907,L914; .tex#L933; Evidence_Ledger#L116,L118",
+      "calculations": {"superseded_errata_count": 12},
+      "caveats": "Fully superseded by 13_FORENSIC_ERRATA.md (ERR-01 through ERR-12).",
+      "verdict": "HOLD"
+    }
+  ]
+}

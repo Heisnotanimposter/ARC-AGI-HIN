@@ -1,0 +1,24 @@
+Project HINAGI — ARC-AGI-3 Telemetry Auditing & Context-Boundary Reconstruction
+Copyright 2024-2026 Seungwon Lee (redcar1024@gmail.com)
+
+1. Author Sovereignty & Historical MIT Lineage Preservation
+This public release (HINAGI_R3_2_PUBLIC_RELEASE) adopts Apache License, Version 2.0
+strictly for new public distribution while preserving all prior V12 R3.2-CP-3 and
+Original Tier R1 release artifacts permanently under the MIT License without
+retroactive revocation of recipient rights.
+
+2. Upstream Third-Party Attributions (Preserved Verbatim)
+- Tufalabs/duck-harness (upstream commit 7652836056c59e044f093e3c13ed7438c814169e,
+  Jeroen Cottaar and Tufa Labs; ARC3-Inference/pyproject.toml MIT classifier).
+- da-fr/arc-agi-3-solution (fork HEAD 10882e332d883af3e61616df8c8a17d03a328a75,
+  Daniel Franzen; Apache License, Version 2.0).
+- Covered files include both reference/arc3_franzen_m2/ (13 files verified byte-identical
+  to fork commit 10882e332d883af3e61616df8c8a17d03a328a75) and upstream portions
+  (Cell 02 af58714 diff + 12 upstream cells from Tufalabs commit 7652836056c59e04)
+  within the three DERIVATIVE_MIXED reference snapshot notebooks under
+  artifacts/phase6_5/reference_snapshots/.
+
+3. Tooling Provenance Note
+AI assistants (Antigravity and GPT) functioned strictly as software development,
+verification, and audit support tooling under Author Sovereignty Principle governance
+and are not legal co-authors or copyright holders.
